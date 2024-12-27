@@ -5,6 +5,10 @@ import * as fs from "fs";
 export class AssistantProvider implements vscode.WebviewViewProvider {
     constructor(private readonly context: vscode.ExtensionContext) {}
 
+    onCommandClicked(command: string) {
+        vscode.commands.executeCommand(command);
+    }
+
     resolveWebviewView(webviewView: vscode.WebviewView, context: vscode.WebviewViewResolveContext, token: vscode.CancellationToken): void {
         webviewView.webview.options = {
             enableScripts: true,
@@ -13,6 +17,16 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         };
 
         webviewView.webview.html = this.getHtmlForWebview(webviewView.webview);
+
+        webviewView.webview.onDidReceiveMessage((data) => {
+            switch (data.type) {
+                case "commandClicked": {
+                    console.info("onDidReceiveMessage: ", data.value);
+                    this.onCommandClicked(data.value);
+                    break;
+                }
+            }
+        });
     }
 
     private getHtmlForWebview(webview: vscode.Webview): string {

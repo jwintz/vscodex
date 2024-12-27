@@ -24,54 +24,59 @@
     "contributes": {
         "commands": [
             {
+                "command": "codex.command.explorer",
+                "category": "Codex",
+                "title": "Explorer"
+            },
+            {
                 "command": "codex.command.indentBuffer",
                 "category": "Codex",
-                "title": "Codex: Indent Buffer"
+                "title": "Indent Buffer"
             },
             {
                 "command": "codex.command.indentRegion",
                 "category": "Codex",
-                "title": "Codex: Indent Region"
+                "title": "Indent Region"
             },
             {
                 "command": "codex.command.commentRegion",
                 "category": "Codex",
-                "title": "Codex: Comment Region"
+                "title": "Comment Region"
             },
             {
                 "command": "codex.command.uncommentRegion",
                 "category": "Codex",
-                "title": "Codex: Uncomment Region"
+                "title": "Uncomment Region"
             },
             {
                 "command": "codex.command.makeHeader",
                 "category": "Codex",
-                "title": "Codex: Make Header"
+                "title": "Make Header"
             },
             {
                 "command": "codex.command.makeSection",
                 "category": "Codex",
-                "title": "Codex: Make Section"
+                "title": "Make Section"
             },
             {
                 "command": "codex.command.makeDivider",
                 "category": "Codex",
-                "title": "Codex: Make Divider"
+                "title": "Make Divider"
             },
             {
                 "command": "codex.command.magit",
                 "category": "Codex",
-                "title": "Codex: Magit"
+                "title": "Magit"
             },
             {
                 "command": "codex.leader.enter",
                 "category": "Codex",
-                "title": "Codex: Enter Leader Mode"
+                "title": "Enter Leader Mode"
             },
             {
                 "command": "codex.leader.leave",
                 "category": "Codex",
-                "title": "Codex: Leave Leader Mode"
+                "title": "Leave Leader Mode"
             }
         ],
         "configuration": {
@@ -177,6 +182,14 @@
                             ],
                             "command": "codex.command.makeDivider",
                             "label": "Make divider"
+                        },
+                        {
+                            "keySequence": [
+                                "e",
+                                "e"
+                            ],
+                            "command": "codex.command.explorer",
+                            "label": "Explorer"
                         },
                         {
                             "keySequence": [

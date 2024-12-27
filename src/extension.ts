@@ -1,8 +1,8 @@
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
-import * as assistant from './assistant_provider';
-import * as command from './command_provider';
-import * as leader from './leader_provider';
+import * as assistant from "./assistant_provider";
+import * as command from "./command_provider";
+import * as leader from "./leader_provider";
 
 export function activate(context: vscode.ExtensionContext): void {
     // /////////////////////////////////////////////////////////////////////////
@@ -10,9 +10,7 @@ export function activate(context: vscode.ExtensionContext): void {
     // /////////////////////////////////////////////////////////////////////////
 
     const provider = new assistant.AssistantProvider(context);
-    context.subscriptions.push(
-        vscode.window.registerWebviewViewProvider('assistant', provider),
-    );
+    context.subscriptions.push(vscode.window.registerWebviewViewProvider("assistant", provider));
 
     // ////////////////////////////////////////////////////////////////////////
     // Commands provider
@@ -21,51 +19,57 @@ export function activate(context: vscode.ExtensionContext): void {
     const command_provider = new command.CommandProvider(context.extensionUri);
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('codex.command.indentBuffer', () => {
+        vscode.commands.registerCommand("codex.command.explorer", () => {
+            command_provider.explorer();
+        })
+    );
+
+    context.subscriptions.push(
+        vscode.commands.registerCommand("codex.command.indentBuffer", () => {
             command_provider.indent_buffer();
-        }),
+        })
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('codex.command.indentRegion', () => {
+        vscode.commands.registerCommand("codex.command.indentRegion", () => {
             command_provider.indent_region();
-        }),
+        })
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('codex.command.commentRegion', () => {
+        vscode.commands.registerCommand("codex.command.commentRegion", () => {
             command_provider.comment_region();
-        }),
+        })
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('codex.command.uncommentRegion', () => {
+        vscode.commands.registerCommand("codex.command.uncommentRegion", () => {
             command_provider.uncomment_region();
-        }),
+        })
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('codex.command.makeHeader', () => {
+        vscode.commands.registerCommand("codex.command.makeHeader", () => {
             command_provider.make_header();
-        }),
+        })
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('codex.command.makeSection', () => {
+        vscode.commands.registerCommand("codex.command.makeSection", () => {
             command_provider.make_section();
-        }),
+        })
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('codex.command.makeDivider', () => {
+        vscode.commands.registerCommand("codex.command.makeDivider", () => {
             command_provider.make_divider();
-        }),
+        })
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('codex.command.magit', () => {
+        vscode.commands.registerCommand("codex.command.magit", () => {
             command_provider.magit();
-        }),
+        })
     );
 
     // ////////////////////////////////////////////////////////////////////////
@@ -75,14 +79,14 @@ export function activate(context: vscode.ExtensionContext): void {
     const leader_provider = new leader.LeaderProvider(context.extensionUri);
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('codex.leader.enter', () => {
+        vscode.commands.registerCommand("codex.leader.enter", () => {
             leader_provider.enable();
-        }),
+        })
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('codex.leader.leave', () => {
+        vscode.commands.registerCommand("codex.leader.leave", () => {
             leader_provider.disable();
-        }),
+        })
     );
 }

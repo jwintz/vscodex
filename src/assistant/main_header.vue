@@ -45,7 +45,7 @@
                 <div class="flex gap-x-5">
                     <a href="#3">
                         <span class="shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-vscode-commandCenter-border bg-vscode-commandCenter-background text-vscode-commandCenter-foreground shadow-sm mx-auto">
-                            <i class="codicon codicon-record-keys" style="font-size: 2em"></i>
+                            <i class="codicon codicon-settings" style="font-size: 2em"></i>
                         </span>
                     </a>
                     <div class="grow">
@@ -57,7 +57,7 @@
                 <div class="flex gap-x-5">
                     <a href="#4">
                         <span class="shrink-0 inline-flex justify-center items-center size-[46px] rounded-full border border-vscode-commandCenter-border bg-vscode-commandCenter-background text-vscode-commandCenter-foreground shadow-sm mx-auto">
-                            <i class="codicon codicon-record-keys" style="font-size: 2em"></i>
+                            <i class="codicon codicon-layout-sidebar-right" style="font-size: 2em"></i>
                         </span>
                     </a>
                     <div class="grow">

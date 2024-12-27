@@ -6,7 +6,7 @@
         Assistant
     </p>
 
-    <div class="max-w-[85rem] bg-vscode-background rounded-sm mb-1 shadow-sm border border-vscode-commandCenter-border h-64"></div>
+    <div class="max-w-[85rem] bg-vscode-background rounded mb-1 shadow-sm border border-vscode-commandCenter-border h-64"></div>
 </template>
 
 <style scoped></style>

@@ -6,7 +6,7 @@
         Configuration
     </p>
 
-    <div class="max-w-[85rem] bg-vscode-background rounded-sm mb-5 shadow-sm border border-vscode-commandCenter-border h-64"></div>
+    <div class="max-w-[85rem] bg-vscode-background rounded mb-5 shadow-sm border border-vscode-commandCenter-border h-64"></div>
 </template>
 
 <style scoped></style>

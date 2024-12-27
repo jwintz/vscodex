@@ -6,6 +6,7 @@
                 emacsKeybindings: [],
             };
         },
+        emits: ["commandClicked"],
         mounted() {
             if (window.codexPackage && window.emacsPackage) {
                 this.codexKeybindings = window.codexPackage.contributes.keybindings;
@@ -30,13 +31,13 @@
         Keybindings
     </p>
 
-    <div class="max-w-[85rem] bg-vscode-background rounded-sm mb-5 shadow-sm border border-vscode-commandCenter-border">
+    <div class="max-w-[85rem] bg-vscode-background rounded mb-5 shadow-sm border border-vscode-commandCenter-border">
         <div class="flex flex-col">
             <div
                 data-hs-datatable='{
                   "pageLength": 10,
                   "pagingOptions": {
-                    "pageBtnClasses": "min-w-[40px] flex justify-center items-center text-vscode-descriptionForeground hover:bg-vscode-sideBar-background focus:outline-none focus:bg-vscode-sideBar-background py-2.5 text-xs rounded-full disabled:opacity-50 disabled:pointer-events-none"
+                    "pageBtnClasses": "min-w-[40px] flex justify-center items-center text-vscode-descriptionForeground hover:bg-vscode-commandCenter-background focus:outline-none focus:bg-vscode-commandCenter-background py-2.5 text-xs rounded-full disabled:opacity-50 disabled:pointer-events-none"
                   },
                   "selecting": true,
                   "language": {
@@ -46,7 +47,7 @@
                 <div class="px-3 py-3">
                     <div class="relative max-w-full">
                         <label for="hs-table-input-search" class="sr-only">Search</label>
-                        <input type="text" name="hs-table-search" id="hs-table-input-search" class="py-2 px-3 ps-9 block w-full bg-vscode-sideBar-background border-vscode-commandCenter-border shadow-sm rounded-lg text-sm text-vscode-foreground placeholder-vscode-descriptionForeground focus:z-10 focus:border-vscode-inputOption-activeBorder focus:ring-vscode-inputOption-active-border disabled:opacity-50 disabled:pointer-events-none" placeholder="Search for commands" data-hs-datatable-search="" />
+                        <input type="text" name="hs-table-search" id="hs-table-input-search" class="py-2 px-3 ps-9 block w-full bg-vscode-sideBar-background border-vscode-commandCenter-border shadow-sm rounded text-sm text-vscode-foreground placeholder-vscode-descriptionForeground focus:z-10 focus:border-vscode-inputOption-activeBorder focus:ring-vscode-inputOption-active-border disabled:opacity-50 disabled:pointer-events-none" placeholder="Search for keybindings" data-hs-datatable-search="" />
                         <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-3">
                             <svg class="size-4 text-vscode-descriptionForeground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="11" cy="11" r="8"></circle>
@@ -107,26 +108,30 @@
                                     <tr v-for="keybinding in codexKeybindings" class="odd:bg-vscode-editor-background even:bg-vscode-sideBar-background">
                                         <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">
                                             <span v-for="key in keybinding.key.split(' ')" :key="key" class="mr-1">
-                                                <kbd class="min-h-[30px] min-w-[30px] inline-flex justify-center items-center p-1.5 bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-xs text-foreground rounded-md">
+                                                <kbd class="min-h-[30px] min-w-[30px] inline-flex justify-center items-center p-1.5 bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-xs text-foreground rounded-md" style="font-size: 0.65rem; line-height: 0.75rem">
                                                     {{ key }}
                                                 </kbd>
                                             </span>
                                         </td>
-                                        <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">{{ keybinding.command }}</td>
-                                        <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">{{ keybinding.when }}</td>
-                                        <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">Codex</td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem" @click="this.$emit('commandClicked', keybinding.command)">
+                                            <a>{{ keybinding.command }}</a>
+                                        </td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">{{ keybinding.when }}</td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Codex</td>
                                     </tr>
                                     <tr v-for="keybinding in emacsKeybindings" class="odd:bg-vscode-editor-background even:bg-vscode-sideBar-background">
                                         <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">
                                             <span v-for="key in keybinding.key.split(' ')" :key="key" class="mr-1">
-                                                <kbd class="min-h-[30px] min-w-[30px] inline-flex justify-center items-center p-1.5 bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-xs text-foreground rounded-md">
+                                                <kbd class="min-h-[30px] min-w-[30px] inline-flex justify-center items-center p-1.5 bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-xs text-foreground rounded-md" style="font-size: 0.65rem; line-height: 0.75rem">
                                                     {{ key }}
                                                 </kbd>
                                             </span>
                                         </td>
-                                        <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">{{ keybinding.command }}</td>
-                                        <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">{{ keybinding.when }}</td>
-                                        <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">Emacs Awesome Keybindings</td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem" @click="this.$emit('commandClicked', keybinding.command)">
+                                            <a>{{ keybinding.command }}</a>
+                                        </td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">{{ keybinding.when }}</td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Emacs Awesome Keybindings</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -136,12 +141,12 @@
 
                 <div class="py-3 hidden border-t border-vscode-commandCenter-border" data-hs-datatable-paging="">
                     <nav class="flex items-center space-x-1">
-                        <button type="button" class="p-2.5 min-w-[40px] inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-vscode-descriptionForeground hover:bg-vscode-sideBar-background focus:outline-none focus:bg-vscode-sideBar-background disabled:opacity-50 disabled:pointer-events-none" data-hs-datatable-paging-prev="">
+                        <button type="button" class="p-2.5 min-w-[40px] inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-vscode-descriptionForeground hover:bg-vscode-commandCenter-background focus:outline-none focus:bg-vscode-sideBar-background disabled:opacity-50 disabled:pointer-events-none" data-hs-datatable-paging-prev="">
                             <span aria-hidden="true">«</span>
                             <span class="sr-only">Previous</span>
                         </button>
-                        <div class="flex items-center space-x-1 text-vscode-descriptionForeground [&>.active]:bg-vscode-sideBar-background" data-hs-datatable-paging-pages=""></div>
-                        <button type="button" class="p-2.5 min-w-[40px] inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-vscode-descriptionForeground hover:bg-vscode-sideBar-background focus:outline-none focus:bg-vscode-sideBar-background disabled:opacity-50 disabled:pointer-events-none" data-hs-datatable-paging-next="">
+                        <div class="flex items-center space-x-1 text-vscode-descriptionForeground [&>.active]:bg-vscode-commandCenter-background" data-hs-datatable-paging-pages=""></div>
+                        <button type="button" class="p-2.5 min-w-[40px] inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-vscode-descriptionForeground hover:bg-vscode-commandCenter-background focus:outline-none focus:bg-vscode-sideBar-background disabled:opacity-50 disabled:pointer-events-none" data-hs-datatable-paging-next="">
                             <span class="sr-only">Next</span>
                             <span aria-hidden="true">»</span>
                         </button>
