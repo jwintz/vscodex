@@ -4,7 +4,7 @@
     <div class="max-w-full mx-auto mb-6">
         <div class="grid md:grid-cols-2 gap-6">
             <div>
-                <h2 class="text-3xl text-vscode-forerground font-bold lg:text-4xl">CodeX: Personal extension framework</h2>
+                <h2 class="text-2xl text-vscode-forerground font-bold lg:text-4xl">CodeX: Personal extension framework</h2>
                 <p class="mt-3 text-vscode-descriptionForeground text-justify">VSCodeX is a personal extension framework for Visual Studio Code that allows you to create your own extension with a set of predefined components.</p>
                 <p class="mt-3 text-vscode-descriptionForeground text-justify">It is currently opinionated and built as a rewrite of some of my Emacs' doom configuration essential blocks that have been ported as a leading framework, commands and keybindings. This extension also provides strong user interface tweaks that are currently only tailored to my taste. This is meant to change in the near future.</p>
                 <p class="mt-5">

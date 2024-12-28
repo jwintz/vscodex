@@ -291,6 +291,22 @@
         },
         "keybindings": [
             {
+                "key": "ctrl+x n",
+                "command": "workbench.action.nextEditor"
+            },
+            {
+                "key": "ctrl+x right",
+                "command": "-workbench.action.nextEditor"
+            },
+            {
+                "key": "ctrl+x p",
+                "command": "workbench.action.previousEditor"
+            },
+            {
+                "key": "ctrl+x left",
+                "command": "-workbench.action.previousEditor"
+            },
+            {
                 "key": "alt+g shift+.",
                 "command": "cursorBottom",
                 "when": "editorTextFocus"
@@ -452,11 +468,14 @@
         "@vscode/codicons": "^0.0.36",
         "@vue/compiler-sfc": "^3.5.13",
         "autoprefixer": "^10.4.20",
+        "clipboard": "^2.0.11",
         "datatables.net-dt": "^2.1.8",
+        "highlight.js": "^11.11.1",
         "jquery": "^3.7.1",
         "postcss": "^8.4.49",
         "preline": "^2.6.0",
         "tailwindcss": "^3.4.17",
+        "toastify-js": "^1.12.0",
         "vue": "^3.5.13"
     },
     "extensionPack": [

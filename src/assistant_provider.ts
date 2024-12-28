@@ -40,7 +40,11 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
 
         const jqueryUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "jquery", "dist", "jquery.min.js"));
         const datatablesUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "datatables.net", "js", "dataTables.min.js"));
+        const clipboardUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "clipboard", "dist", "clipboard.min.js"));
+        const toastifyUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "toastify-js", "src", "toastify.js"));
         const prelineUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "preline", "dist", "preline.js"));
+        const prelineClipboardUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "preline", "dist", "helper-clipboard.js"));
+        const highlightUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "src", "assistant", "highlight.min.js"));
 
         const iconsUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "@vscode", "codicons", "dist", "codicon.css"));
 
@@ -59,8 +63,10 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link href="${iconsUri}" rel="stylesheet">
         <link href="${styleUri}" rel="stylesheet">
+
         <title>Codex</title>
     </head>
     <body>
@@ -71,8 +77,13 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         </script>
         <script src="${jqueryUri}"></script>
 		<script src="${datatablesUri}"></script>
+		<script src="${clipboardUri}"></script>
+		<script src="${toastifyUri}"></script>
         <script src="${prelineUri}"></script>
+        <script src="${prelineClipboardUri}"></script>
+        <script src="${highlightUri}"></script>
         <script type="module" src="${scriptUri}"></script>
+        <script>hljs.highlightAll();</script>
     </body>
 </html>`;
     }
