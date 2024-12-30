@@ -3,6 +3,7 @@
         data() {
             return {
                 codexKeybindings: [],
+                codexKeybindingsLeaded: [],
                 emacsKeybindings: [],
             };
         },
@@ -10,12 +11,14 @@
         mounted() {
             if (window.codexPackage && window.emacsPackage) {
                 this.codexKeybindings = window.codexPackage.contributes.keybindings;
+                this.codexKeybindingsLeaded = window.codexPackage.contributes.configuration.properties["codex.leader.keybindings"].default;
                 this.emacsKeybindings = window.emacsPackage.contributes.keybindings;
             } else {
                 const checkInterval = setInterval(() => {
                     if (window.codexPackage && emacsPackage) {
-                        this.codexCommands = window.codexPackage.contributes.keybindings;
-                        this.emacsCommands = window.emacsPackage.contributes.keybindings;
+                        this.codexKeybindings = window.codexPackage.contributes.keybindings;
+                        this.codexKeybindingsLeaded = window.codexPackage.contributes.configuration.properties["codex.leader.keybindings"].default;
+                        this.emacsKeybindings = window.emacsPackage.contributes.keybindings;
 
                         clearInterval(checkInterval);
                     }
@@ -114,6 +117,26 @@
                                             </span>
                                         </td>
                                         <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem" @click="this.$emit('commandClicked', keybinding.command)">
+                                            <a>{{ keybinding.command }}</a>
+                                        </td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">{{ keybinding.when }}</td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Codex</td>
+                                    </tr>
+                                    <tr v-for="keybinding in codexKeybindingsLeaded" class="odd:bg-vscode-editor-background even:bg-vscode-sideBar-background">
+                                        <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">
+                                            <span class="mr-1">
+                                                <kbd class="min-h-[30px] min-w-[30px] inline-flex justify-center items-center p-1.5 bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-xs text-foreground rounded-md" style="font-size: 0.65rem; line-height: 0.75rem">C-c</kbd>
+                                            </span>
+                                            <span v-for="key in keybinding.keySequence" :key="key" class="mr-1">
+                                                <kbd class="min-h-[30px] min-w-[30px] inline-flex justify-center items-center p-1.5 bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-xs text-foreground rounded-md" style="font-size: 0.65rem; line-height: 0.75rem">
+                                                    {{ key }}
+                                                </kbd>
+                                            </span>
+                                        </td>
+                                        <td v-if="keybinding.label" class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem" @click="this.$emit('commandClicked', keybinding.command)">
+                                            <a>{{ keybinding.label }}</a>
+                                        </td>
+                                        <td v-else class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem" @click="this.$emit('commandClicked', keybinding.command)">
                                             <a>{{ keybinding.command }}</a>
                                         </td>
                                         <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">{{ keybinding.when }}</td>

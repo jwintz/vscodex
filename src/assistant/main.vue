@@ -21,6 +21,9 @@
             commandClicked(command) {
                 vscode.postMessage({ type: "commandClicked", value: command });
             },
+            insertClicked(configuration) {
+                vscode.postMessage({ type: "insertClicked", value: configuration });
+            },
         },
     };
 </script>
@@ -29,7 +32,7 @@
     <main_header />
     <main_commands @commandClicked="(command) => commandClicked(command)" />
     <main_keybindings @commandClicked="(command) => commandClicked(command)" />
-    <main_configuration />
+    <main_configuration @insertClicked="(configuration) => insertClicked(configuration)" />
     <main_assistant />
     <main_colophon />
 

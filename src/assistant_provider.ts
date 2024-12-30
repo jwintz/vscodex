@@ -9,10 +9,13 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         vscode.commands.executeCommand(command);
     }
 
+    onInsertClicked(configuration: string) {
+        vscode.window.activeTextEditor?.insertSnippet(new vscode.SnippetString(configuration));
+    }
+
     resolveWebviewView(webviewView: vscode.WebviewView, context: vscode.WebviewViewResolveContext, token: vscode.CancellationToken): void {
         webviewView.webview.options = {
             enableScripts: true,
-            // localResourceRoots: [vscode.Uri.file(path.join(this.context.extensionPath, "dist", "assistant"))],
             localResourceRoots: [this.context.extensionUri],
         };
 
@@ -21,8 +24,15 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         webviewView.webview.onDidReceiveMessage((data) => {
             switch (data.type) {
                 case "commandClicked": {
-                    console.info("onDidReceiveMessage: ", data.value);
                     this.onCommandClicked(data.value);
+                    break;
+                }
+                case "insertClicked": {
+                    this.onInsertClicked(data.value);
+                    break;
+                }
+                default: {
+                    console.info("onDidReceiveMessage: ", data.type, data.value);
                     break;
                 }
             }
@@ -45,6 +55,7 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         const prelineUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "preline", "dist", "preline.js"));
         const prelineClipboardUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "preline", "dist", "helper-clipboard.js"));
         const highlightUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "src", "assistant", "highlight.min.js"));
+        const highlightJSONUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "src", "assistant", "highlight-json.min.js"));
 
         const iconsUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "@vscode", "codicons", "dist", "codicon.css"));
 
@@ -82,6 +93,7 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         <script src="${prelineUri}"></script>
         <script src="${prelineClipboardUri}"></script>
         <script src="${highlightUri}"></script>
+        <script src="${highlightJSONUri}"></script>
         <script type="module" src="${scriptUri}"></script>
         <script>hljs.highlightAll();</script>
     </body>

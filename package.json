@@ -1,6 +1,6 @@
 {
     "name": "vscodex",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "main": "./out/extension.js",
     "engines": {
         "vscode": "^1.96.0"
@@ -15,9 +15,15 @@
         "watch:assistant": "vite build --watch",
         "build:extension": "tsc -p ./",
         "watch:extension": "tsc -p ./ --watch",
-        "start": "npm run build:assistant && npm run build:extension"
+        "start": "npm run build:assistant && npm run build:extension",
+        "vscode:prepublish": "npm run start && vsce package",
+        "vscode:publish": "vsce publish"
     },
-    "keywords": [],
+    "keywords": [
+        "codex",
+        "leader",
+        "emacs"
+    ],
     "author": "",
     "license": "MIT",
     "description": "",
@@ -403,6 +409,11 @@
                 "when": "editorTextFocus"
             },
             {
+                "key": "ctrl+alt+0",
+                "command": "workbench.action.zoomReset",
+                "when": "editorTextFocus"
+            },
+            {
                 "key": "ctrl+shift+alt+0",
                 "command": "workbench.action.zoomReset",
                 "when": "editorTextFocus"
@@ -480,6 +491,7 @@
     },
     "extensionPack": [
         "tuttieee.emacs-mcx",
-        "wenhoujx.swiper"
+        "wenhoujx.swiper",
+        "alefragnani.project-manager"
     ]
 }
