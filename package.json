@@ -5,6 +5,7 @@
     "engines": {
         "vscode": "^1.96.0"
     },
+    "icon": "package.png",
     "publisher": "jwintz",
     "repository": {
         "type": "git",
@@ -15,9 +16,7 @@
         "watch:assistant": "vite build --watch",
         "build:extension": "tsc -p ./",
         "watch:extension": "tsc -p ./ --watch",
-        "start": "npm run build:assistant && npm run build:extension",
-        "vscode:prepublish": "npm run start && vsce package",
-        "vscode:publish": "vsce publish"
+        "start": "npm run build:assistant && npm run build:extension"
     },
     "keywords": [
         "codex",
