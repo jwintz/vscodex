@@ -73,9 +73,11 @@ Types of changes include:
     - [x] `C-A-=`: `workbench.action.zoomOut`
     - [x] `C-A-0`: `workbench.action.zoomReset`
     - [x] `tab`: `editor.action.indentLines`
+    - [x] `M C-space`: `workbench.action.toggleSidebarVisibility`
     - [x] `M C-A-space`: `workbench.action.toggleAuxiliaryBar`
     - [x] `C-c`: `codex.leader.enter`
     - [x] `C-g`: `codex.leader.leave`
+    - [x] `M-q`: `rewrap.rewrapComment`
 
 - View:
 
@@ -86,3 +88,4 @@ Types of changes include:
     - [x] `tuttieee.emacs-mcx`
     - [x] `wenhoujx.swiper`
     - [x] `alefragnani.project-manager`
+    - [x] `dnut.rewrap-revived`

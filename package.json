@@ -293,7 +293,8 @@
         },
         "configurationDefaults": {
             "emacs-mcx.useMetaPrefixEscape": true,
-            "emacs-mcx.emacsLikeTab": true
+            "emacs-mcx.emacsLikeTab": true,
+            "rewrap.wrappingColumn": 80
         },
         "keybindings": [
             {
@@ -442,6 +443,11 @@
                 "key": "ctrl+g",
                 "command": "codex.leader.leave",
                 "when": "leadermode.isActive"
+            },
+            {
+                "key": "escape q",
+                "command": "rewrap.rewrapComment",
+                "when": "editorTextFocus"
             }
         ],
         "viewsContainers": {
@@ -492,6 +498,7 @@
     "extensionPack": [
         "tuttieee.emacs-mcx",
         "wenhoujx.swiper",
-        "alefragnani.project-manager"
+        "alefragnani.project-manager",
+        "dnut.rewrap-revived"
     ]
 }
