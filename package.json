@@ -1,11 +1,14 @@
 {
     "name": "vscodex",
+    "displayName": "Codex",
     "version": "0.0.1",
+    "author": "Julien Wintz",
     "main": "./out/extension.js",
     "engines": {
         "vscode": "^1.96.0"
     },
     "icon": "package.png",
+    "description": "Personal extension framework",
     "publisher": "jwintz",
     "repository": {
         "type": "git",
@@ -23,9 +26,7 @@
         "leader",
         "emacs"
     ],
-    "author": "",
     "license": "MIT",
-    "description": "",
     "contributes": {
         "commands": [
             {

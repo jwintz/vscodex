@@ -79,7 +79,7 @@ export class CommandProvider {
         y++;
         header += " ";
         y++;
-        header += "Version: $Id: 7c5eb60b626ee0b6d3ea22524a5b745a34152818 $";
+        header += "Version: $" + "Id:  $";
         header += "\n";
         x++;
         y = 0;
