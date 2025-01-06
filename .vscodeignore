@@ -1,0 +1,43 @@
+# Exclude git files
+.git
+.gitignore
+
+# Exclude VS Code workspace settings
+.vscode
+.editorconfig
+.eslintignore
+.eslintrc.json
+.prettierrc
+.prettierignore
+
+# Exclude testing files and configurations
+test/
+*.spec.*
+*.test.*
+
+# Exclude build output directories
+# out/
+# dist/
+temp/
+coverage/
+
+# Exclude node_modules except runtime dependencies
+node_modules/
+!node_modules/jquery
+!node_modules/datatables.net
+!node_modules/clipboard
+!node_modules/toastify-js
+!node_modules/preline
+!node_modules/@vscode/codicons
+
+# Exclude OS-specific files
+.DS_Store
+Thumbs.db
+
+# Exclude package manager lock files (optional)
+package-lock.json
+yarn.lock
+
+# Exclude documentation and other non-code files
+README.md
+CHANGELOG.md

@@ -19,7 +19,8 @@
         "watch:assistant": "vite build --watch",
         "build:extension": "tsc -p ./",
         "watch:extension": "tsc -p ./ --watch",
-        "start": "npm run build:assistant && npm run build:extension"
+        "start": "npm run build:assistant && npm run build:extension",
+        "clean": "rm -rf out && rm -rf dist && rm -rf node_modules && rm -rf *.vsix"
     },
     "keywords": [
         "codex",
@@ -488,7 +489,6 @@
         "autoprefixer": "^10.4.20",
         "clipboard": "^2.0.11",
         "datatables.net-dt": "^2.1.8",
-        "highlight.js": "^11.11.1",
         "jquery": "^3.7.1",
         "postcss": "^8.4.49",
         "preline": "^2.6.0",
