@@ -1,3 +1,19 @@
+// Version: $Id: $
+//
+//
+
+// Commentary:
+//
+//
+
+// Changelog:
+//
+//
+
+//
+// Code starts here
+// /////////////////////////////////////////////////////////////////////////////
+
 import * as vscode from "vscode";
 import * as path from "path";
 import * as fs from "fs";
@@ -87,9 +103,9 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
             window.emacsPackage = ${JSON.stringify(emacsPackage)};
         </script>
         <script src="${jqueryUri}"></script>
-		<script src="${datatablesUri}"></script>
-		<script src="${clipboardUri}"></script>
-		<script src="${toastifyUri}"></script>
+        <script src="${datatablesUri}"></script>
+        <script src="${clipboardUri}"></script>
+        <script src="${toastifyUri}"></script>
         <script src="${prelineUri}"></script>
         <script src="${prelineClipboardUri}"></script>
         <script src="${highlightUri}"></script>
@@ -100,3 +116,6 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
 </html>`;
     }
 }
+
+// /////////////////////////////////////////////////////////////////////////////
+// Code ends here

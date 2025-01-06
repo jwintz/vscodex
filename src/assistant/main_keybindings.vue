@@ -154,7 +154,7 @@
                                             <a>{{ keybinding.command }}</a>
                                         </td>
                                         <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">{{ keybinding.when }}</td>
-                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Emacs Awesome Keybindings</td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Awesome Emacs Keybindings</td>
                                     </tr>
                                 </tbody>
                             </table>

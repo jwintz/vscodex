@@ -107,7 +107,7 @@
                                             <a>{{ command.command }}</a>
                                         </td>
                                         <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">{{ command.title }}</td>
-                                        <td class="p-3 whitespace-nowrap text-xs font-monotext-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Emacs Awesome Commands</td>
+                                        <td class="p-3 whitespace-nowrap text-xs font-monotext-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Awesome Emacs Commands</td>
                                     </tr>
                                 </tbody>
                             </table>

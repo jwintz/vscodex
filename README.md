@@ -9,6 +9,21 @@ keybindings, configuration and views.
 VSCodeX also serves as an extension pack, that is, it gathers, configures and
 articulates other extensions in a way that is meant to be consistent.
 
+**Building instructions**
+
+```sh
+# Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+nvm install --lts=iron
+nvm use --lts=iron
+
+# Build and install the extension
+npm install
+npm run build:assistant
+npm run build:extension
+npx vsce package
+```
+
 ## Table of Contents
 
 1. [Commands](#commands)

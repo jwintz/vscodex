@@ -1,4 +1,4 @@
-// Version: $Id: 7c5eb60b626ee0b6d3ea22524a5b745a34152818 $
+// Version: $Id: $
 //
 //
 
@@ -66,7 +66,7 @@ export class CommandProvider {
 
         let line_first = document.lineAt(0).text;
 
-        let should_insert_header = !line_first.startsWith(delimiter + delimiter + "Version: " + "$Id");
+        let should_insert_header = !line_first.startsWith(delimiter + delimiter + " " + "Version: " + "$Id");
 
         let x = position.line;
         let y = position.character;
@@ -218,7 +218,7 @@ export class CommandProvider {
 
         let should_insert_footer = line_last != delimiter + delimiter + " " + "Code ends here";
 
-        let footer: string = "\n\n";
+        let footer: string = "\n";
         footer += delimiter;
         y++;
         footer += delimiter;
