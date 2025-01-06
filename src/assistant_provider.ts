@@ -72,6 +72,7 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         const prelineClipboardUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "preline", "dist", "helper-clipboard.js"));
         const highlightUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "src", "assistant", "highlight.min.js"));
         const highlightJSONUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "src", "assistant", "highlight-json.min.js"));
+        const highlightSHELLUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "src", "assistant", "highlight-shell.min.js"));
 
         const iconsUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "@vscode", "codicons", "dist", "codicon.css"));
 
@@ -110,6 +111,7 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         <script src="${prelineClipboardUri}"></script>
         <script src="${highlightUri}"></script>
         <script src="${highlightJSONUri}"></script>
+        <script src="${highlightSHELLUri}"></script>
         <script type="module" src="${scriptUri}"></script>
         <script>hljs.highlightAll();</script>
     </body>
