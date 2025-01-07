@@ -51,6 +51,9 @@ Types of changes include:
     - [x] `C-c e m`: `codex.command.makeHeader`
     - [x] `C-c p f`: `projectManager.listProjects`
     - [x] `C-c p w`: `projectManager.saveProject`
+    - [x] `C-c v c`: `git.commit`
+    - [x] `C-c v p`: `git.push`
+    - [x] `C-c v s`: `git.stageAll`
     - [x] `C-x n`: `workbench.action.nextEditor`
     - [x] `C-x p`: `workbench.action.previousEditor`
     - [x] `M >`: `cursorBottom`
@@ -89,3 +92,4 @@ Types of changes include:
     - [x] `wenhoujx.swiper`
     - [x] `alefragnani.project-manager`
     - [x] `dnut.rewrap-revived`
+    - [x] `prkns.purrp-vscode`
