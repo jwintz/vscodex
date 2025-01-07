@@ -11,7 +11,11 @@ nvm use --lts=iron
 npm install
 npm run build:assistant
 npm run build:extension
-npx vsce package`,
+npx vsce package
+
+# Publish the extension
+npx vsce login <publisher_id>
+npx vsce publish`,
             };
         },
     };

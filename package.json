@@ -1,6 +1,6 @@
 {
     "name": "vscodex",
-    "displayName": "Codex",
+    "displayName": "VSCodeX",
     "version": "0.0.1",
     "author": "Julien Wintz",
     "main": "./out/extension.js",
