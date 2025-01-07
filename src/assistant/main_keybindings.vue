@@ -69,7 +69,7 @@
                                         <th scope="col" class="py-1 group text-start font-normal focus:outline-none">
                                             <div class="p-3 inline-flex items-center uppercase border border-transparent text-xs font-medium text-vscode-descriptionForeground">
                                                 Key
-                                                <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <svg class="size-3.5 ms-1 -me-0.5 text-vscode-descriptionForeground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                     <path class="hs-datatable-ordering-desc:text-vscode-textLink-foreground dark:hs-datatable-ordering-desc:text-vscode-textLink-foreground" d="m7 15 5 5 5-5"></path>
                                                     <path class="hs-datatable-ordering-asc:text-vscode-textLink-foreground dark:hs-datatable-ordering-asc:text-vscode-textLink-foreground" d="m7 9 5-5 5 5"></path>
                                                 </svg>
@@ -79,7 +79,7 @@
                                         <th scope="col" class="py-1 group text-start font-normal focus:outline-none">
                                             <div class="p-3 inline-flex items-center uppercase border border-transparent text-xs font-medium text-vscode-descriptionForeground">
                                                 Command
-                                                <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <svg class="size-3.5 ms-1 -me-0.5 text-vscode-descriptionForeground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                     <path class="hs-datatable-ordering-desc:text-vscode-textLink-foreground dark:hs-datatable-ordering-desc:text-vscode-textLink-foreground" d="m7 15 5 5 5-5"></path>
                                                     <path class="hs-datatable-ordering-asc:text-vscode-textLink-foreground dark:hs-datatable-ordering-asc:text-vscode-textLink-foreground" d="m7 9 5-5 5 5"></path>
                                                 </svg>
@@ -89,7 +89,7 @@
                                         <th scope="col" class="py-1 group text-start font-normal focus:outline-none">
                                             <div class="p-3 inline-flex items-center uppercase border border-transparent text-xs font-medium text-vscode-descriptionForeground">
                                                 When
-                                                <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <svg class="size-3.5 ms-1 -me-0.5 text-vscode-descriptionForeground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                     <path class="hs-datatable-ordering-desc:text-vscode-textLink-foreground dark:hs-datatable-ordering-desc:text-vscode-textLink-foreground" d="m7 15 5 5 5-5"></path>
                                                     <path class="hs-datatable-ordering-asc:text-vscode-textLink-foreground dark:hs-datatable-ordering-asc:text-vscode-textLink-foreground" d="m7 9 5-5 5 5"></path>
                                                 </svg>
@@ -99,7 +99,7 @@
                                         <th scope="col" class="py-1 group text-start font-normal focus:outline-none">
                                             <div class="p-3 inline-flex items-center uppercase border border-transparent text-xs font-medium text-vscode-descriptionForeground">
                                                 Category
-                                                <svg class="size-3.5 ms-1 -me-0.5 text-gray-400 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <svg class="size-3.5 ms-1 -me-0.5 text-vscode-descriptionForeground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                     <path class="hs-datatable-ordering-desc:text-vscode-textLink-foreground dark:hs-datatable-ordering-desc:text-vscode-textLink-foreground" d="m7 15 5 5 5-5"></path>
                                                     <path class="hs-datatable-ordering-asc:text-vscode-textLink-foreground dark:hs-datatable-ordering-asc:text-vscode-textLink-foreground" d="m7 9 5-5 5 5"></path>
                                                 </svg>

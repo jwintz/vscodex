@@ -90,8 +90,49 @@
     <div class="mt-3 text-vscode-descriptionForeground">
         <div id="equal-width-elements-1" class="text-justify" role="tabpanel" aria-labelledby="equal-width-elements-item-1">
             <div class="hs-accordion-group space-y-3">
-                <div class="hs-accordion active hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="primary-heading-one">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-active-bordered-collapse-one">
+                <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="primary-heading-zero">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-active-bordered-collapse-zero">
+                        Keybindings
+                        <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                        </svg>
+                    </button>
+                    <div id="hs-basic-active-bordered-collapse-zero" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="primary-heading-zero">
+                        <div class="w-full flex flex-col">
+                            <div class="-m-1.5 overflow-x-auto">
+                                <div class="p-1.5 min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full">
+                                            <tbody class="divide-y divide-vscode-commandCenter-border">
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Toggle</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">M</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-space</kbd>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Navigate in views</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-q</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-Q</kbd>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="primary-heading-one">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
                         Nature
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -101,7 +142,7 @@
                             <path d="M5 12h14"></path>
                         </svg>
                     </button>
-                    <div id="hs-basic-active-bordered-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="primary-heading-one">
+                    <div id="hs-basic-active-bordered-collapse-one" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="primary-heading-one">
                         <div class="pb-4 px-5">
                             <ul class="list-none list-inside space-y-2">
                                 <li>
@@ -122,7 +163,7 @@
                 </div>
 
                 <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="primary-heading-two">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-two">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-two">
                         Intent
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -166,7 +207,7 @@
                 </div>
 
                 <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="primary-heading-three">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-three">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-three">
                         Common Activity Views
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -205,7 +246,7 @@
                 </div>
 
                 <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="primary-heading-four">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-four">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-four">
                         Customisation Options
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -229,8 +270,70 @@
         </div>
         <div id="equal-width-elements-2" class="hidden text-justify" role="tabpanel" aria-labelledby="equal-width-elements-item-2">
             <div class="hs-accordion-group space-y-3">
-                <div class="hs-accordion active hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="workspace-heading-one">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-active-bordered-collapse-one">
+                <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="primary-heading-zero">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-active-bordered-collapse-zero">
+                        Keybindings
+                        <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                        </svg>
+                    </button>
+                    <div id="hs-basic-active-bordered-collapse-zero" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="primary-heading-zero">
+                        <div class="w-full flex flex-col">
+                            <div class="-m-1.5 overflow-x-auto">
+                                <div class="p-1.5 min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full">
+                                            <tbody class="divide-y divide-vscode-commandCenter-border">
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Close editor</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-x</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">0</kbd>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Close all other editors</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-x</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">1</kbd>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Split editor vertically</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-x</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">2</kbd>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Split editor horizontally</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-x</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">3</kbd>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Navigate in views</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-x</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">b</kbd>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="workspace-heading-one">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
                         Nature
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -240,7 +343,7 @@
                             <path d="M5 12h14"></path>
                         </svg>
                     </button>
-                    <div id="hs-basic-active-bordered-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="workspace-heading-one">
+                    <div id="hs-basic-active-bordered-collapse-one" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="workspace-heading-one">
                         <div class="pb-4 px-5">
                             <ul class="list-disc list-inside space-y-2">
                                 <li>
@@ -265,7 +368,7 @@
                 </div>
 
                 <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="workspace-heading-two">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-two">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-two">
                         Intent
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -300,7 +403,7 @@
                 </div>
 
                 <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="workspace-heading-three">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-three">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-three">
                         Key Features
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -341,8 +444,49 @@
         </div>
         <div id="equal-width-elements-3" class="hidden text-justify" role="tabpanel" aria-labelledby="equal-width-elements-item-3">
             <div class="hs-accordion-group space-y-3">
-                <div class="hs-accordion active hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="auxiliary-heading-one">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-active-bordered-collapse-one">
+                <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="auxiliary-heading-zero">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-active-bordered-collapse-zero">
+                        Keybindings
+                        <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                        </svg>
+                    </button>
+                    <div id="hs-basic-active-bordered-collapse-zero" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="auxiliary-heading-zero">
+                        <div class="w-full flex flex-col">
+                            <div class="-m-1.5 overflow-x-auto">
+                                <div class="p-1.5 min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full">
+                                            <tbody class="divide-y divide-vscode-commandCenter-border">
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Toggle</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">M</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-A-space</kbd>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Navigate in views</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-q</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-Q</kbd>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="auxiliary-heading-one">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
                         Nature
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -352,7 +496,7 @@
                             <path d="M5 12h14"></path>
                         </svg>
                     </button>
-                    <div id="hs-basic-active-bordered-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="auxiliary-heading-one">
+                    <div id="hs-basic-active-bordered-collapse-one" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="auxiliary-heading-one">
                         <div class="pb-4 px-5">
                             <ul class="list-disc list-inside space-y-2">
                                 <li>
@@ -377,7 +521,7 @@
                 </div>
 
                 <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="auxiliary-heading-two">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-two">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-two">
                         Intent
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -412,7 +556,7 @@
                 </div>
 
                 <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="auxiliary-heading-three">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-three">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-three">
                         Key Features
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -449,8 +593,49 @@
         </div>
         <div id="equal-width-elements-4" class="hidden text-justify" role="tabpanel" aria-labelledby="equal-width-elements-item-4">
             <div class="hs-accordion-group space-y-3">
-                <div class="hs-accordion active hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="panels-heading-one">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-active-bordered-collapse-one">
+                <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="panels-heading-zero">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-active-bordered-collapse-zero">
+                        Keybindings
+                        <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                        </svg>
+                    </button>
+                    <div id="hs-basic-active-bordered-collapse-zero" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="panels-heading-zero">
+                        <div class="w-full flex flex-col">
+                            <div class="-m-1.5 overflow-x-auto">
+                                <div class="p-1.5 min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full">
+                                            <tbody class="divide-y divide-vscode-commandCenter-border">
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Toggle</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-x</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">j</kbd>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Navigate in views</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-q</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-Q</kbd>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="panels-heading-one">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
                         Nature
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -460,7 +645,7 @@
                             <path d="M5 12h14"></path>
                         </svg>
                     </button>
-                    <div id="hs-basic-active-bordered-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="panels-heading-one">
+                    <div id="hs-basic-active-bordered-collapse-one" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="panels-heading-one">
                         <div class="pb-4 px-5">
                             <ul class="list-disc list-inside space-y-2">
                                 <li>
@@ -485,7 +670,7 @@
                 </div>
 
                 <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="panels-heading-two">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-two">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-two">
                         Intent
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>
@@ -520,7 +705,7 @@
                 </div>
 
                 <div class="hs-accordion hs-accordion-active:bg-vscode-background rounded border border-vscode-commandCenter-border" id="panels-heading-three">
-                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-textLink-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-textLink-activeForeground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-three">
+                    <button class="hs-accordion-toggle hs-accordion-active:text-vscode-button-foreground inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-vscode-foreground py-4 px-5 hover:text-vscode-button-foreground disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-three">
                         Key Features
                         <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"></path>

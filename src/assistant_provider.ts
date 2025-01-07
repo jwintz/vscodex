@@ -67,7 +67,6 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         const jqueryUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "jquery", "dist", "jquery.min.js"));
         const datatablesUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "datatables.net", "js", "dataTables.min.js"));
         const clipboardUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "clipboard", "dist", "clipboard.min.js"));
-        const toastifyUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "toastify-js", "src", "toastify.js"));
         const prelineUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "preline", "dist", "preline.js"));
         const prelineClipboardUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "node_modules", "preline", "dist", "helper-clipboard.js"));
         const highlightUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "src", "assistant", "highlight.min.js"));
@@ -106,7 +105,6 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         <script src="${jqueryUri}"></script>
         <script src="${datatablesUri}"></script>
         <script src="${clipboardUri}"></script>
-        <script src="${toastifyUri}"></script>
         <script src="${prelineUri}"></script>
         <script src="${prelineClipboardUri}"></script>
         <script src="${highlightUri}"></script>

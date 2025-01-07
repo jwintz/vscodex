@@ -1,3 +1,19 @@
+## Version: $Id:  $
+##
+##
+
+## Commentary:
+##
+##
+
+## Changelog:
+##
+##
+
+##
+## Code starts here
+## #############################################################################
+
 # Exclude git files
 .git
 .gitignore
@@ -9,6 +25,11 @@
 .eslintrc.json
 .prettierrc
 .prettierignore
+
+# Exclude build configuration files
+tailwind.config.js
+tsconfig.json
+vite.config.ts
 
 # Exclude testing files and configurations
 test/
@@ -23,12 +44,11 @@ coverage/
 
 # Exclude node_modules except runtime dependencies
 node_modules/
-!node_modules/jquery
-!node_modules/datatables.net
-!node_modules/clipboard
-!node_modules/toastify-js
-!node_modules/preline
-!node_modules/@vscode/codicons
+!node_modules/jquery/dist
+!node_modules/datatables.net/js
+!node_modules/clipboard/dist
+!node_modules/preline/dist
+!node_modules/@vscode/codicons/dist
 
 # Exclude OS-specific files
 .DS_Store
@@ -41,3 +61,11 @@ yarn.lock
 # Exclude documentation and other non-code files
 README.md
 CHANGELOG.md
+
+# Exclude assets
+package.curve
+package.icns
+package.png
+
+## #############################################################################
+## Code ends here
