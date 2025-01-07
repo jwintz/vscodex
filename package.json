@@ -251,6 +251,36 @@
                             ],
                             "command": "projectManager.saveProject",
                             "label": "Save project"
+                        },
+                        {
+                            "keySequence": [
+                                "v"
+                            ],
+                            "label": "Versioning"
+                        },
+                        {
+                            "keySequence": [
+                                "v",
+                                "c"
+                            ],
+                            "command": "git.commit",
+                            "label": "Git Commit"
+                        },
+                        {
+                            "keySequence": [
+                                "v",
+                                "p"
+                            ],
+                            "command": "git.push",
+                            "label": "Git Push"
+                        },
+                        {
+                            "keySequence": [
+                                "v",
+                                "s"
+                            ],
+                            "command": "git.stageAll",
+                            "label": "Git stage all changes"
                         }
                     ],
                     "type": "array",
