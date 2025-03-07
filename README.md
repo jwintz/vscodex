@@ -22,6 +22,10 @@ npm install
 npm run build:assistant
 npm run build:extension
 npx vsce package
+
+# Publish the extension
+npx vsce login
+npx vsce publish
 ```
 
 ## Table of Contents

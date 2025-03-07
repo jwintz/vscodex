@@ -21,6 +21,14 @@ export class CommandProvider {
 
     constructor(private readonly _extensionUri: vscode.Uri) {}
 
+    public tab() {
+        vscode.commands.executeCommand("cursorHome");
+        vscode.commands.executeCommand("cursorEndSelect");
+        vscode.commands.executeCommand("editor.action.formatSelection");
+        vscode.commands.executeCommand("cursorHome");
+        vscode.commands.executeCommand("emacs-mcx.tab");
+    }
+
     public explorer() {
         vscode.commands.executeCommand("workbench.files.action.focusFilesExplorer");
     }

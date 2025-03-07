@@ -20,7 +20,8 @@
         "build:extension": "tsc -p ./",
         "watch:extension": "tsc -p ./ --watch",
         "start": "npm run build:assistant && npm run build:extension",
-        "clean": "rm -rf out && rm -rf dist && rm -rf node_modules && rm -rf *.vsix"
+        "clean": "rm -rf out && rm -rf dist && rm -rf node_modules && rm -rf *.vsix",
+        "full": "code --uninstall-extension jwintz.vscodex && npm run clean && npm install && npm run build:assistant && npm run build:extension && npx vsce package && rm -rf $HOME/.vscode/extensions/jwintz.vscodex* && code --install-extension vscodex-0.0.1.vsix"
     },
     "keywords": [
         "codex",
@@ -329,6 +330,10 @@
         },
         "keybindings": [
             {
+                "key": "ctrl+x j",
+                "command": "workbench.action.togglePanel"
+            },
+            {
                 "key": "ctrl+x n",
                 "command": "workbench.action.nextEditor"
             },
@@ -452,7 +457,7 @@
             },
             {
                 "key": "tab",
-                "command": "editor.action.indentLines",
+                "command": "codex.command.tab",
                 "when": "editorTextFocus"
             },
             {

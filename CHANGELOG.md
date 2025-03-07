@@ -13,6 +13,20 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.2] - 2025-01-09
+
+### Added
+
+- Extension Pack:
+
+    - [x] `ibm.output-colorizer`
+
+### Fixed
+
+- Keybindings:
+
+    - [x] `workbench.action.togglePanel`
+
 ## [0.0.1] - 2024-12-11
 
 ### Added

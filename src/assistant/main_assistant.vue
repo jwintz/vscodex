@@ -323,6 +323,13 @@
                                                         <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">b</kbd>
                                                     </td>
                                                 </tr>
+                                                <tr>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs font-medium text-vscode-foreground">Navigate in editors</td>
+                                                    <td class="px-5 py-3 whitespace-nowrap text-xs">
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">C-x</kbd>
+                                                        <kbd class="mr-1 text-xs font-semibold bg-vscode-commandCenter-background border border-vscode-commandCenter-border font-mono text-foreground rounded-md px-2 py-1">arrow</kbd>
+                                                    </td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
