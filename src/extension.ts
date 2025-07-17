@@ -19,12 +19,6 @@ export function activate(context: vscode.ExtensionContext): void {
     const command_provider = new command.CommandProvider(context.extensionUri);
 
     context.subscriptions.push(
-        vscode.commands.registerCommand("codex.command.tab", () => {
-            command_provider.tab();
-        })
-    );
-
-    context.subscriptions.push(
         vscode.commands.registerCommand("codex.command.explorer", () => {
             command_provider.explorer();
         })

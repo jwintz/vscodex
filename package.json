@@ -5,7 +5,7 @@
     "author": "Julien Wintz",
     "main": "./out/extension.js",
     "engines": {
-        "vscode": "^1.96.0"
+        "vscode": "^1.94.0"
     },
     "icon": "package_full.png",
     "description": "Personal extension framework",
@@ -21,7 +21,7 @@
         "watch:extension": "tsc -p ./ --watch",
         "start": "npm run build:assistant && npm run build:extension",
         "clean": "rm -rf out && rm -rf dist && rm -rf node_modules && rm -rf *.vsix",
-        "full": "code --uninstall-extension jwintz.vscodex && npm run clean && npm install && npm run build:assistant && npm run build:extension && npx vsce package && rm -rf $HOME/.vscode/extensions/jwintz.vscodex* && code --install-extension vscodex-0.0.1.vsix"
+        "full": "npm run clean && npm install && npm run build:assistant && npm run build:extension && npx vsce package && rm -rf $HOME/.vscode/extensions/jwintz.vscodex*"
     },
     "keywords": [
         "codex",
@@ -228,30 +228,8 @@
                                 "e",
                                 "s"
                             ],
-                            "command": "C_Cpp.SwitchHeaderSource",
+                            "command": "clangd.switchheadersource",
                             "label": "Toggle Header/Source"
-                        },
-                        {
-                            "keySequence": [
-                                "p"
-                            ],
-                            "label": "Projectile"
-                        },
-                        {
-                            "keySequence": [
-                                "p",
-                                "f"
-                            ],
-                            "command": "projectManager.listProjects",
-                            "label": "Open project"
-                        },
-                        {
-                            "keySequence": [
-                                "p",
-                                "w"
-                            ],
-                            "command": "projectManager.saveProject",
-                            "label": "Save project"
                         },
                         {
                             "keySequence": [
@@ -456,11 +434,6 @@
                 "when": "editorTextFocus"
             },
             {
-                "key": "tab",
-                "command": "codex.command.tab",
-                "when": "editorTextFocus"
-            },
-            {
                 "key": "ctrl+g",
                 "command": "codex.leader.leave",
                 "when": "codex.leader.isActive"
@@ -508,7 +481,7 @@
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.9",
         "@types/node": "^22.10.2",
-        "@types/vscode": "^1.96.0",
+        "@types/vscode": "^1.94.0",
         "@vitejs/plugin-vue": "^5.2.1",
         "@vscode/vsce": "^3.2.1",
         "@vue/runtime-core": "^3.5.13",
@@ -533,8 +506,6 @@
     "extensionPack": [
         "tuttieee.emacs-mcx",
         "wenhoujx.swiper",
-        "alefragnani.project-manager",
-        "dnut.rewrap-revived",
-        "prkns.purrp-vscode"
+        "dnut.rewrap-revived"
     ]
 }
