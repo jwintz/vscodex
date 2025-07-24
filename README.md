@@ -178,11 +178,9 @@ comprehensive development environment. The curated list of extensions includes:
 
 - [Awesome Emacs Keymap](https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx)
 - [Swiper](https://marketplace.visualstudio.com/items?itemName=wenhoujx.swiper)
-- [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
 - [Rewrap](https://marketplace.visualstudio.com/items?itemName=dnut.rewrap-revived)
 
-By combining these extensions, VSCodeX ensures a consistent and productive
-workflow for developers.
+By combining these extensions, VSCodeX ensures a consistent and productive workflow for developers.
 
 ## References
 
