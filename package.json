@@ -1,9 +1,10 @@
 {
     "name": "vscodex",
     "displayName": "VSCodeX",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "Julien Wintz",
     "main": "./out/extension.js",
+    "browser": "./out/web/extension.js",
     "engines": {
         "vscode": "^1.94.0"
     },
@@ -18,16 +19,27 @@
         "build:assistant": "vite build",
         "watch:assistant": "vite build --watch",
         "build:extension": "tsc -p ./",
+        "build:web": "tsc -p ./tsconfig.web.json",
         "watch:extension": "tsc -p ./ --watch",
-        "start": "npm run build:assistant && npm run build:extension",
+        "watch:web": "tsc -p ./tsconfig.web.json --watch",
+        "start": "npm run build:assistant && npm run build:extension && npm run build:web",
         "clean": "rm -rf out && rm -rf dist && rm -rf node_modules && rm -rf *.vsix",
-        "full": "npm run clean && npm install && npm run build:assistant && npm run build:extension && npx vsce package && rm -rf $HOME/.vscode/extensions/jwintz.vscodex*"
+        "full": "npm run clean && npm install && npm run build:assistant && npm run build:extension && npm run build:web && npx vsce package"
     },
     "keywords": [
         "codex",
         "leader",
         "emacs"
     ],
+    "categories": [
+        "Other"
+    ],
+    "capabilities": {
+        "virtualWorkspaces": true,
+        "untrustedWorkspaces": {
+            "supported": true
+        }
+    },
     "license": "MIT",
     "contributes": {
         "commands": [
@@ -303,8 +315,8 @@
         },
         "configurationDefaults": {
             "emacs-mcx.useMetaPrefixEscape": true,
-            "emacs-mcx.emacsLikeTab": true,
-            "rewrap.wrappingColumn": 80
+            "emacs-mcx.useMetaPrefixCtrlLeftBracket": true,
+            "emacs-mcx.emacsLikeTab": true
         },
         "keybindings": [
             {

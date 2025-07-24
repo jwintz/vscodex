@@ -13,13 +13,13 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
-## [0.0.2] - 2025-01-09
+## [0.0.2] - 2025-07-24
 
 ### Added
 
-- Extension Pack:
-
-    - [x] `ibm.output-colorizer`
+- Architecture:
+    - [x] Web entry point
+    - [x] Virtual workspace support
 
 ### Fixed
 
