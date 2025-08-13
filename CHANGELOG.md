@@ -13,6 +13,12 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.10] - 2025-08-13
+
+### Added
+
+- Release actions
+
 ## [0.0.9] - 2025-08-13
 
 ### Added
