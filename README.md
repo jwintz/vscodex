@@ -27,6 +27,13 @@ npx vsce login
 npx vsce publish
 ```
 
+**Automated Publishing**
+
+```sh
+git tag vX.Y.Z
+git push origin vX.Y.Z
+```
+
 ## Table of Contents
 
 1. [Commands](#commands)

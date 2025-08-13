@@ -23,8 +23,7 @@
         "watch:extension": "tsc -p ./ --watch",
         "watch:web": "tsc -p ./tsconfig.web.json --watch",
         "start": "npm run build:assistant && npm run build:extension && npm run build:web",
-        "clean": "rm -rf out && rm -rf dist && rm -rf node_modules && rm -rf *.vsix",
-        "full": "npm run clean && npm install && npm run build:assistant && npm run build:extension && npm run build:web && npx vsce package"
+        "clean": "rm -rf out && rm -rf dist && rm -rf node_modules && rm -rf *.vsix"
     },
     "keywords": [
         "codex",
@@ -517,6 +516,7 @@
         "@vscode/vsce": "^3.2.1",
         "@vue/runtime-core": "^3.5.13",
         "@vue/runtime-dom": "^3.5.13",
+        "ovsx": "^0.9.5",
         "prettier": "^3.4.2",
         "prettier-plugin-tailwindcss": "^0.6.9",
         "prettier-plugin-vue": "^1.1.6",
