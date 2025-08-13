@@ -1,19 +1,19 @@
 {
     "name": "vscodex",
     "displayName": "VSCodeX",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "author": "Julien Wintz",
     "main": "./out/extension.js",
     "browser": "./out/web/extension.js",
     "engines": {
         "vscode": "^1.94.0"
     },
-    "icon": "package_full.png",
+    "icon": "package.png",
     "description": "Personal extension framework",
     "publisher": "jwintz",
     "repository": {
         "type": "git",
-        "url": "https://gitlab.inria.fr/jwintz/vscodex"
+        "url": "https://github.com/jwintz/vscodex"
     },
     "scripts": {
         "build:assistant": "vite build",
@@ -179,7 +179,7 @@
                                 "r"
                             ],
                             "command": "workbench.action.debug.restart",
-                            "label": "Debug stop"
+                            "label": "Debug restart"
                         },
                         {
                             "keySequence": [
@@ -361,7 +361,13 @@
             },
             {
                 "key": "ctrl+s",
-                "command": "swiper.swiper"
+                "command": "-emacs-mcx.isearchForward",
+                "when": "!findInputFocussed"
+            },
+            {
+                "key": "ctrl+s",
+                "command": "swiper.swiper",
+                "when": "!findInputFocussed"
             },
             {
                 "key": "ctrl+x shift+0",
@@ -469,6 +475,11 @@
                 "key": "escape q",
                 "command": "rewrap.rewrapComment",
                 "when": "editorTextFocus"
+            },
+            {
+                "key": "ctrl+c y",
+                "command": "-emacs-mcx.browseKillRing",
+                "when": "!terminalFocus"
             }
         ],
         "viewsContainers": {
@@ -518,6 +529,7 @@
     "extensionPack": [
         "tuttieee.emacs-mcx",
         "wenhoujx.swiper",
-        "dnut.rewrap-revived"
+        "dnut.rewrap-revived",
+        "jwintz.vscodet"
     ]
 }

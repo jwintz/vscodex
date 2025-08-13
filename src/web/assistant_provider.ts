@@ -4,7 +4,6 @@
 
 // Commentary:
 //
-// Web-compatible version of AssistantProvider that doesn't use Node.js APIs
 //
 
 // Changelog:
@@ -18,7 +17,7 @@
 import * as vscode from "vscode";
 
 export class AssistantProvider implements vscode.WebviewViewProvider {
-    constructor(private readonly context: vscode.ExtensionContext) {}
+    constructor(private readonly context: vscode.ExtensionContext) { }
 
     onCommandClicked(command: string) {
         vscode.commands.executeCommand(command);
@@ -60,7 +59,7 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
     private async getHtmlForWebview(webview: vscode.Webview): Promise<string> {
         // Use VS Code's file system API instead of Node.js fs
         const assistantDistUri = vscode.Uri.joinPath(this.context.extensionUri, "dist", "assistant");
-        
+
         try {
             // Try to read the manifest file using VS Code's file system API
             const manifestUri = vscode.Uri.joinPath(assistantDistUri, ".vite", "manifest.json");
@@ -122,7 +121,7 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
 
         } catch (error) {
             console.error("Failed to load manifest or generate webview HTML:", error);
-            
+
             // Fallback: create basic HTML without manifest
             const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "dist", "assistant", "main.js"));
             const styleUri = webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "dist", "assistant", "main.css"));

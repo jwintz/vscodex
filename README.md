@@ -185,3 +185,7 @@ By combining these extensions, VSCodeX ensures a consistent and productive workf
 ## References
 
 1. [VSCode Extension API](https://code.visualstudio.com/api)
+
+## License
+
+MIT © [jwintz](https://github.com/jwintz)

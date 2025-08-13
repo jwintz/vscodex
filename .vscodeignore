@@ -27,8 +27,10 @@
 .prettierignore
 
 # Exclude build configuration files
+postcss.config.js
 tailwind.config.js
 tsconfig.json
+tsconfig.web.json
 vite.config.ts
 
 # Exclude testing files and configurations
@@ -61,11 +63,11 @@ yarn.lock
 # Exclude documentation and other non-code files
 README.md
 CHANGELOG.md
+LICENCE.md
 
 # Exclude assets
 package.curve
-package.icns
-package.png
+package-mcx.json
 
 ## #############################################################################
 ## Code ends here

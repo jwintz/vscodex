@@ -1,3 +1,19 @@
+// Version: $Id:  $
+// 
+// 
+
+// Commentary:
+// 
+// 
+
+// Changelog:
+// 
+// 
+
+// 
+// Code starts here
+// /////////////////////////////////////////////////////////////////////////////
+
 import * as vscode from "vscode";
 
 import * as assistant from "./assistant_provider";
@@ -91,4 +107,7 @@ export function activate(context: vscode.ExtensionContext): void {
     );
 }
 
-export function deactivate(): void {}
+export function deactivate(): void { }
+
+// /////////////////////////////////////////////////////////////////////////////
+// Code ends here

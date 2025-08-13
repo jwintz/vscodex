@@ -13,6 +13,23 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.4] - 2025-08-13
+
+### Added
+
+- Extension Pack:
+
+    - [x] `jwintz.vscodet`
+
+## [0.0.3] - 2025-08-04
+
+### Fixed
+
+- Keybindings:
+
+    - [x] `codex.leader.enter`
+    - [x] `--emacs-mcx.browseKillRing`
+
 ## [0.0.2] - 2025-07-24
 
 ### Added
@@ -104,6 +121,4 @@ Types of changes include:
 
     - [x] `tuttieee.emacs-mcx`
     - [x] `wenhoujx.swiper`
-    - [x] `alefragnani.project-manager`
     - [x] `dnut.rewrap-revived`
-    - [x] `prkns.purrp-vscode`

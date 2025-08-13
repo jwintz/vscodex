@@ -1,6 +1,25 @@
+// Version: $Id:  $
+// 
+// 
+
+// Commentary:
+// 
+// 
+
+// Changelog:
+// 
+// 
+
+// 
+// Code starts here
+// /////////////////////////////////////////////////////////////////////////////
+
 import { createApp } from "vue";
 import Main from "./main.vue";
 import "./main.css";
 
 const app = createApp(Main);
 app.mount("#main");
+
+// /////////////////////////////////////////////////////////////////////////////
+// Code ends here
