@@ -49,7 +49,7 @@
                 <span class="size-2 bg-vscode-commandCenter-background border border-vscode-commandCenter-border rounded-full"></span>
                 <span class="size-2 bg-vscode-commandCenter-background border border-vscode-commandCenter-border rounded-full"></span>
             </div>
-            <div class="flex justify-center items-center size-full min-w-[10rem] border border-vscode-commandCenter-border bg-vscode-commandCenter-background text-[.5rem] text-vscode-descriptionForeground rounded-sm sm:text-[.5rem]">VSCodeX</div>
+            <div class="flex justify-center items-center size-full min-w-[10rem] border border-vscode-commandCenter-border bg-vscode-commandCenter-background text-[.5rem] text-vscode-descriptionForeground rounded-sm sm:text-[.5rem]">Code:X</div>
         </div>
 
         <div

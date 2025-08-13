@@ -1,12 +1,11 @@
-# VSCodeX: Personal Extension Framework
+# Code:X
 
-VSCodeX is a personal extension framework for Visual Studio Code that allows you
-to create your own extension with a set of predefined components.
+Code:X is a personal extension framework for Visual Studio Code that allows you to create your own extension with a set of predefined components.
 
 Its structure follows entry points for a VSCode extension, namely commands,
 keybindings, configuration and views.
 
-VSCodeX also serves as an extension pack, that is, it gathers, configures and
+Code:X also serves as an extension pack, that is, it gathers, configures and
 articulates other extensions in a way that is meant to be consistent.
 
 **Building instructions**
@@ -43,7 +42,7 @@ perform, such as formatting code, creating new files, or interacting with the
 terminal. These commands are accessible via the Command Palette (`M-x`) or can
 be triggered by keybindings, menus, or APIs.
 
-In VSCodeX, commands are defined in the `package.json` file of the extension
+In Code:X, commands are defined in the `package.json` file of the extension
 under the `commands` section. Each command has an identifier, a title, and an
 optional category to group similar commands. For example:
 
@@ -64,7 +63,7 @@ allowing users to quickly execute actions without needing to navigate menus or
 the Command Palette. Visual Studio Code uses a `keybindings.json` file to
 define these mappings, and extensions can contribute their own.
 
-In VSCodeX, the previous command is mapped to a keybinding like this:
+In Code:X, the previous command is mapped to a keybinding like this:
 
 ```json
 "keybindings": {
@@ -140,7 +139,7 @@ VSCode settings interface. Extensions contribute settings via the configuration
 section in `package.json`, enabling users to modify options in the
 `settings.json` file or through the GUI settings editor.
 
-For example, VSCodeX defines a configurable setting like this:
+For example, Code:X defines a configurable setting like this:
 
 ```json
 "configuration": {
@@ -163,7 +162,7 @@ It also provides default settings for extensions present in the extension pack.
 
 ## Assistant
 
-The assistant is a core feature of VSCodeX, serving as a view within the
+The assistant is a core feature of Code:X, serving as a view within the
 extension that provides an interactive interface for users. Views in VSCode are
 UI components that integrate into the Activity Bar, Side Bar, or other areas,
 and they are defined in the `package.json` under the views section.
@@ -173,14 +172,14 @@ an interactive contextual interface.
 
 ## Extension Pack
 
-VSCodeX also acts as an extension pack, bundling other extensions to provide a
+Code:X also acts as an extension pack, bundling other extensions to provide a
 comprehensive development environment. The curated list of extensions includes:
 
 - [Awesome Emacs Keymap](https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx)
 - [Swiper](https://marketplace.visualstudio.com/items?itemName=wenhoujx.swiper)
 - [Rewrap](https://marketplace.visualstudio.com/items?itemName=dnut.rewrap-revived)
 
-By combining these extensions, VSCodeX ensures a consistent and productive workflow for developers.
+By combining these extensions, Code:X ensures a consistent and productive workflow for developers.
 
 ## References
 

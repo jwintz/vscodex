@@ -1,7 +1,7 @@
 {
     "name": "vscodex",
-    "displayName": "VSCodeX",
-    "version": "0.0.4",
+    "displayName": "Code:X",
+    "version": "0.0.7",
     "author": "Julien Wintz",
     "main": "./out/extension.js",
     "browser": "./out/web/extension.js",

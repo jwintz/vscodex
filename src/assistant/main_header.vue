@@ -25,17 +25,17 @@ npx vsce publish`,
     <div class="w-full mb-6">
         <div class="grid md:grid-cols-2 gap-6">
             <div class="overflow-auto">
-                <h2 class="text-2xl text-vscode-forerground font-bold lg:text-4xl">CodeX: Personal extension framework</h2>
-                <p class="mt-3 text-vscode-descriptionForeground text-justify">VSCodeX is a personal extension framework for Visual Studio Code that allows you to create your own extension with a set of predefined components.</p>
+                <h2 class="text-2xl text-vscode-forerground font-bold lg:text-4xl">Code:X: Personal extension framework</h2>
+                <p class="mt-3 text-vscode-descriptionForeground text-justify">Code:X is a personal extension framework for Visual Studio Code that allows you to create your own extension with a set of predefined components.</p>
                 <p class="mt-3 text-vscode-descriptionForeground text-justify">Its structure follows entry points for a VSCode extension, namely commands, keybindings, configuration and views.</p>
-                <p class="mt-3 text-vscode-descriptionForeground text-justify">VSCodeX also serves as an extension pack, that is, it gathers, configures and articulates other extensions in a way that is meant to be consistent.</p>
+                <p class="mt-3 text-vscode-descriptionForeground text-justify">Code:X also serves as an extension pack, that is, it gathers, configures and articulates other extensions in a way that is meant to be consistent.</p>
 
                 <div class="mt-3 p-2 overflow-x-scroll font-mono text-xs bg-vscode-background disabled:opacity-50 disabled:pointer-events-none rounded mb-5 shadow-sm border border-vscode-commandCenter-border" style="font-size: 0.65rem; line-height: 0.8rem">
                     <pre><code class="language-shell">{{ this.instructions }}</code></pre>
                 </div>
 
                 <p class="mt-5">
-                    <a class="inline-flex items-center gap-x-1 text-sm text-vscode-textLink-foreground decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="https://gitlab.inria.fr/jwintz/vscodex" target="_blank">
+                    <a class="inline-flex items-center gap-x-1 text-sm text-vscode-textLink-foreground decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="https://gitlab.inria.fr/jwintz/Code:X" target="_blank">
                         Browse the documentation on GitLab
                         <svg class="shrink-0 size-4 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="m9 18 6-6-6-6" />
@@ -89,7 +89,7 @@ npx vsce publish`,
                     </a>
                     <div class="grow">
                         <h3 class="text-base sm:text-lg font-semibold text-vscode-foreground">Assistant</h3>
-                        <p class="mt-1 text-justify text-vscode-descriptionForeground">The assistant is a core feature of VSCodeX, serving as a view within the extension that provides an interactive interface for users.</p>
+                        <p class="mt-1 text-justify text-vscode-descriptionForeground">The assistant is a core feature of Code:X, serving as a view within the extension that provides an interactive interface for users.</p>
                     </div>
                 </div>
             </div>

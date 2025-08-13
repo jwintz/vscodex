@@ -13,6 +13,24 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.7] - 2025-08-13
+
+### Changed
+
+- Naming conventions
+
+## [0.0.6] - 2025-08-13
+
+### Changed
+
+- Naming conventions
+
+## [0.0.5] - 2025-08-13
+
+### Changed
+
+- Display Name -> Code:X
+
 ## [0.0.4] - 2025-08-13
 
 ### Added
