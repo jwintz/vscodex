@@ -1,7 +1,7 @@
 {
     "name": "vscodex",
     "displayName": "Code:X",
-    "version": "0.0.7",
+    "version": "0.0.9",
     "author": "Julien Wintz",
     "main": "./out/extension.js",
     "browser": "./out/web/extension.js",
@@ -45,62 +45,62 @@
         "commands": [
             {
                 "command": "codex.command.explorer",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Explorer"
             },
             {
                 "command": "codex.command.indentBuffer",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Indent Buffer"
             },
             {
                 "command": "codex.command.indentRegion",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Indent Region"
             },
             {
                 "command": "codex.command.commentRegion",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Comment Region"
             },
             {
                 "command": "codex.command.uncommentRegion",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Uncomment Region"
             },
             {
                 "command": "codex.command.makeHeader",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Make Header"
             },
             {
                 "command": "codex.command.makeSection",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Make Section"
             },
             {
                 "command": "codex.command.makeDivider",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Make Divider"
             },
             {
                 "command": "codex.command.magit",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Magit"
             },
             {
                 "command": "codex.leader.enter",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Enter Leader Mode"
             },
             {
                 "command": "codex.leader.leave",
-                "category": "Codex",
+                "category": "Code:X",
                 "title": "Leave Leader Mode"
             }
         ],
         "configuration": {
-            "title": "Codex Leader Mode",
+            "title": "Code:X Leader Mode",
             "type": "object",
             "properties": {
                 "codex.leader.showKeyGuide": {
@@ -462,6 +462,14 @@
                 "when": "config.emacs-mcx.useMetaPrefixEscape"
             },
             {
+                "key": "ctrl+x [",
+                "command": "workbench.action.toggleSidebarVisibility"
+            },
+            {
+                "key": "ctrl+x ]",
+                "command": "workbench.action.toggleAuxiliaryBar"
+            },
+            {
                 "key": "ctrl+c",
                 "command": "codex.leader.enter",
                 "when": "editorTextFocus"
@@ -486,7 +494,7 @@
             "activitybar": [
                 {
                     "id": "vscodex",
-                    "title": "Codex",
+                    "title": "Code:X",
                     "icon": "package.png"
                 }
             ]
@@ -495,7 +503,7 @@
             "vscodex": [
                 {
                     "id": "assistant",
-                    "name": "Codex",
+                    "name": "Code:X",
                     "type": "webview"
                 }
             ]

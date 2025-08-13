@@ -19,7 +19,7 @@ import * as path from "path";
 import * as fs from "fs";
 
 export class AssistantProvider implements vscode.WebviewViewProvider {
-    constructor(private readonly context: vscode.ExtensionContext) {}
+    constructor(private readonly context: vscode.ExtensionContext) { }
 
     onCommandClicked(command: string) {
         vscode.commands.executeCommand(command);
@@ -94,7 +94,7 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         <link href="${iconsUri}" rel="stylesheet">
         <link href="${styleUri}" rel="stylesheet">
 
-        <title>Codex</title>
+        <title>Code:X</title>
     </head>
     <body>
         <div id="main"></div>

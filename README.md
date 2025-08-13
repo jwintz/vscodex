@@ -50,7 +50,7 @@ optional category to group similar commands. For example:
 "commands": [
     {
         "command": "codex.leader.enter",
-        "category": "Codex",
+        "category": "Code:X",
         "title": "Enter Leader Mode"
     }
 ]
@@ -143,7 +143,7 @@ For example, Code:X defines a configurable setting like this:
 
 ```json
 "configuration": {
-    "title": "Codex Leader Mode",
+    "title": "Code:X Leader Mode",
     "type": "object",
     "properties": {
         "codex.leader.showKeyGuide": {

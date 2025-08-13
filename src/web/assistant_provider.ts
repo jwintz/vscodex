@@ -156,7 +156,7 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         <link href="${iconsUri}" rel="stylesheet">
         <link href="${styleUri}" rel="stylesheet">
 
-        <title>Codex</title>
+        <title>Code:X</title>
     </head>
     <body>
         <div id="main"></div>
@@ -189,7 +189,7 @@ export class AssistantProvider implements vscode.WebviewViewProvider {
         <link href="${iconsUri}" rel="stylesheet">
         <link href="${styleUri}" rel="stylesheet">
 
-        <title>Codex</title>
+        <title>Code:X</title>
     </head>
     <body>
         <div id="main"></div>

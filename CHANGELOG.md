@@ -13,6 +13,20 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.9] - 2025-08-13
+
+### Added
+
+- Keybindings:
+    - [x] `C-x [`: `workbench.action.toggleSidebarVisibility`
+    - [x] `C-x ]`: `workbench.action.toggleAuxiliaryBar`
+
+## [0.0.8] - 2025-08-13
+
+### Fixed
+
+- Assistant: supporting files were excluded from package
+
 ## [0.0.7] - 2025-08-13
 
 ### Changed

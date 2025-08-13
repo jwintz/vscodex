@@ -120,7 +120,7 @@
                                             <a>{{ keybinding.command }}</a>
                                         </td>
                                         <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">{{ keybinding.when }}</td>
-                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Codex</td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Code:X</td>
                                     </tr>
                                     <tr v-for="keybinding in codexKeybindingsLeaded" class="odd:bg-vscode-editor-background even:bg-vscode-sideBar-background">
                                         <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">
@@ -140,7 +140,7 @@
                                             <a>{{ keybinding.command }}</a>
                                         </td>
                                         <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">{{ keybinding.when }}</td>
-                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Codex</td>
+                                        <td class="p-3 whitespace-nowrap font-mono text-xs text-vscode-foreground" style="font-size: 0.65rem; line-height: 0.75rem">Code:X</td>
                                     </tr>
                                     <tr v-for="keybinding in emacsKeybindings" class="odd:bg-vscode-editor-background even:bg-vscode-sideBar-background">
                                         <td class="p-3 whitespace-nowrap text-xs text-vscode-foreground">
