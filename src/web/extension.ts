@@ -82,12 +82,6 @@ export function activate(context: vscode.ExtensionContext): void {
         })
     );
 
-    context.subscriptions.push(
-        vscode.commands.registerCommand("codex.command.magit", () => {
-            command_provider.magit();
-        })
-    );
-
     // ////////////////////////////////////////////////////////////////////////
     // Leader provider
     // ////////////////////////////////////////////////////////////////////////

@@ -1,7 +1,7 @@
 {
     "name": "vscodex",
     "displayName": "Code:X",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "author": "Julien Wintz",
     "main": "./out/extension.js",
     "browser": "./out/web/extension.js",
@@ -81,11 +81,6 @@
                 "command": "codex.command.makeDivider",
                 "category": "Code:X",
                 "title": "Make Divider"
-            },
-            {
-                "command": "codex.command.magit",
-                "category": "Code:X",
-                "title": "Magit"
             },
             {
                 "command": "codex.leader.enter",
@@ -271,6 +266,14 @@
                             ],
                             "command": "git.stageAll",
                             "label": "Git stage all changes"
+                        },
+                        {
+                            "keySequence": [
+                                "v",
+                                "v"
+                            ],
+                            "command": "magit.status",
+                            "label": "Git Status"
                         }
                     ],
                     "type": "array",
@@ -494,7 +497,7 @@
                 {
                     "id": "vscodex",
                     "title": "Code:X",
-                    "icon": "package.png"
+                    "icon": "$(book)"
                 }
             ]
         },
@@ -503,7 +506,8 @@
                 {
                     "id": "assistant",
                     "name": "Code:X",
-                    "type": "webview"
+                    "type": "webview",
+                    "icon": "$(book)"
                 }
             ]
         }
@@ -536,6 +540,7 @@
     },
     "extensionPack": [
         "tuttieee.emacs-mcx",
+        "kahole.magit",
         "wenhoujx.swiper",
         "dnut.rewrap-revived",
         "jwintz.vscodet"

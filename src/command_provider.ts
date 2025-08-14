@@ -19,7 +19,7 @@ import * as vscode from "vscode";
 export class CommandProvider {
     // private _channel: any = vscode.window.createOutputChannel('vscodex');
 
-    constructor(private readonly _extensionUri: vscode.Uri) {}
+    constructor(private readonly _extensionUri: vscode.Uri) { }
 
     public explorer() {
         vscode.commands.executeCommand("workbench.files.action.focusFilesExplorer");
@@ -376,10 +376,6 @@ export class CommandProvider {
 
                 vscode.commands.executeCommand("editor.action.indentationToSpaces");
             });
-    }
-
-    public magit() {
-        vscode.commands.executeCommand("workbench.scm.focus");
     }
 
     // ////////////////////////////////////////////////////////////////////////

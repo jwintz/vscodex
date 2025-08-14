@@ -13,6 +13,24 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.11] - 2025-08-14
+
+### Added
+
+- Extension Pack:
+
+    - [x] `kahole.magit`
+
+- Keybindings:
+
+    - [x] `C-c v v`: `magit.status`
+
+### Removed
+
+- Commands:
+
+    - [x] `codex.magit`
+
 ## [0.0.10] - 2025-08-13
 
 ### Added
@@ -24,6 +42,7 @@ Types of changes include:
 ### Added
 
 - Keybindings:
+
     - [x] `C-x [`: `workbench.action.toggleSidebarVisibility`
     - [x] `C-x ]`: `workbench.action.toggleAuxiliaryBar`
 

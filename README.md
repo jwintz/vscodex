@@ -183,8 +183,10 @@ Code:X also acts as an extension pack, bundling other extensions to provide a
 comprehensive development environment. The curated list of extensions includes:
 
 - [Awesome Emacs Keymap](https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx)
+- [Magit](https://marketplace.visualstudio.com/items?itemName=kahole.magit)
 - [Swiper](https://marketplace.visualstudio.com/items?itemName=wenhoujx.swiper)
 - [Rewrap](https://marketplace.visualstudio.com/items?itemName=dnut.rewrap-revived)
+- [Code:T](https://marketplace.visualstudio.com/items?itemName=jwintz.vscodet)
 
 By combining these extensions, Code:X ensures a consistent and productive workflow for developers.
 
