@@ -13,6 +13,12 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.17] - 2025-08-15
+
+### Fixed
+
+- Extension for the web: File system API incompatibility: Using fsPath instead of path for URIs 
+
 ## [0.0.15] - 2025-08-15
 
 ### Fixed

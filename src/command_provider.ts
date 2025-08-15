@@ -50,7 +50,7 @@ export class CommandProvider {
 
         if (vscode.workspace.workspaceFolders !== undefined) {
             workspace = vscode.workspace.workspaceFolders[0].uri.path;
-            file_name = document.fileName.substring(vscode.workspace.workspaceFolders[0].uri.fsPath.length + 1);
+            file_name = document.uri.path.substring(workspace.length + 1);
         }
 
         const lang = document.languageId;
