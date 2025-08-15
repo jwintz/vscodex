@@ -18,7 +18,7 @@ import * as vscode from "vscode";
 
 import * as command from "./command_provider";
 
-export function activate(context: vscode.ExtensionContext): void {
+export async function activate(context: vscode.ExtensionContext): Promise<void> {
 
     const command_provider = new command.CommandProvider(context.extensionUri);
 
@@ -64,11 +64,20 @@ export function activate(context: vscode.ExtensionContext): void {
         })
     );
 
-    vscode.commands.executeCommand("whichkey.register", {
-        bindings: "codex.whichkey.bindings",
-        overrides: "codex.whichkey.bindingOverrides",
-        title: "Code:X"
-    });
+    const whichkeyExtension = vscode.extensions.getExtension("vspacecode.whichkey");
+
+    if (whichkeyExtension) {
+        if (!whichkeyExtension.isActive) {
+            await whichkeyExtension.activate();
+        }
+        vscode.commands.executeCommand("whichkey.register", {
+            bindings: "codex.whichkey.bindings",
+            overrides: "codex.whichkey.bindingOverrides",
+            title: "Code:X"
+        });
+    } else {
+        console.warn("Code:X - WhichKey extension not found");
+    }
 }
 
 // /////////////////////////////////////////////////////////////////////////////

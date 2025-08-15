@@ -1,7 +1,7 @@
 {
     "name": "vscodex",
     "displayName": "Code:X",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "author": "Julien Wintz",
     "main": "./out/extension.js",
     "browser": "./out/extension.js",
@@ -25,6 +25,9 @@
     ],
     "activationEvents": [
         "onStartupFinished"
+    ],
+    "extensionDependencies": [
+        "VSpaceCode.whichkey"
     ],
     "capabilities": {
         "virtualWorkspaces": true,
