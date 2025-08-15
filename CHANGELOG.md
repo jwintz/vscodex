@@ -13,6 +13,12 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.18] - 2025-08-16
+
+### Fixed
+
+- Module loading errors on web
+
 ## [0.0.17] - 2025-08-15
 
 ### Fixed
