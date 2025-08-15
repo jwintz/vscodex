@@ -21,10 +21,6 @@ export class CommandProvider {
 
     constructor(private readonly _extensionUri: vscode.Uri) { }
 
-    public explorer() {
-        vscode.commands.executeCommand("workbench.files.action.focusFilesExplorer");
-    }
-
     public indent_buffer() {
         vscode.commands.executeCommand("editor.action.formatDocument");
     }

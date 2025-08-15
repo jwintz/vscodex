@@ -27,30 +27,15 @@
 .prettierignore
 
 # Exclude build configuration files
-postcss.config.js
-tailwind.config.js
 tsconfig.json
-tsconfig.web.json
-vite.config.ts
-
-# Exclude testing files and configurations
-test/
-*.spec.*
-*.test.*
 
 # Exclude build output directories
 # out/
-# dist/
 temp/
 coverage/
 
 # Exclude node_modules except runtime dependencies
 node_modules/
-!node_modules/jquery/dist
-!node_modules/datatables.net/js
-!node_modules/clipboard/dist
-!node_modules/preline/dist
-!node_modules/@vscode/codicons/dist
 
 # Exclude OS-specific files
 .DS_Store

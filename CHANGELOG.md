@@ -13,6 +13,23 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.12] - 2025-08-15
+
+### Added
+
+- Extension Pack:
+
+    - [x] `VSpaceCode.whichkey`
+
+- Configuration:
+
+    - [x] `codex.whichkey.bindings`
+
+### Removed
+
+- Assistant provider
+- Leader provider
+
 ## [0.0.11] - 2025-08-14
 
 ### Added

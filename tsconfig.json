@@ -2,15 +2,14 @@
     "compilerOptions": {
         "target": "ES2022",
         "module": "CommonJS",
-        "lib": ["ES2022", "DOM"],
+        "lib": [ "ES2022", "DOM" ],
         "strict": true,
         "moduleResolution": "node",
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "skipLibCheck": true,
-        "types": ["node"], // Add this line
         "outDir": "./out"
     },
-    "include": ["src/**/*.ts", "src/**/*.vue"],
-    "exclude": ["node_modules"]
+    "include": [ "src/*.ts" ],
+    "exclude": [ "node_modules" ]
 }

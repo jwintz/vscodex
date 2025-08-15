@@ -1,10 +1,9 @@
 {
     "name": "vscodex",
     "displayName": "Code:X",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "author": "Julien Wintz",
     "main": "./out/extension.js",
-    "browser": "./out/web/extension.js",
     "engines": {
         "vscode": "^1.94.0"
     },
@@ -15,16 +14,6 @@
         "type": "git",
         "url": "https://github.com/jwintz/vscodex"
     },
-    "scripts": {
-        "build:assistant": "vite build",
-        "watch:assistant": "vite build --watch",
-        "build:extension": "tsc -p ./",
-        "build:web": "tsc -p ./tsconfig.web.json",
-        "watch:extension": "tsc -p ./ --watch",
-        "watch:web": "tsc -p ./tsconfig.web.json --watch",
-        "start": "npm run build:assistant && npm run build:extension && npm run build:web",
-        "clean": "rm -rf out && rm -rf dist && rm -rf node_modules && rm -rf *.vsix"
-    },
     "keywords": [
         "codex",
         "leader",
@@ -32,6 +21,9 @@
     ],
     "categories": [
         "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
     ],
     "capabilities": {
         "virtualWorkspaces": true,
@@ -42,11 +34,6 @@
     "license": "MIT",
     "contributes": {
         "commands": [
-            {
-                "command": "codex.command.explorer",
-                "category": "Code:X",
-                "title": "Explorer"
-            },
             {
                 "command": "codex.command.indentBuffer",
                 "category": "Code:X",
@@ -81,237 +68,200 @@
                 "command": "codex.command.makeDivider",
                 "category": "Code:X",
                 "title": "Make Divider"
-            },
-            {
-                "command": "codex.leader.enter",
-                "category": "Code:X",
-                "title": "Enter Leader Mode"
-            },
-            {
-                "command": "codex.leader.leave",
-                "category": "Code:X",
-                "title": "Leave Leader Mode"
             }
         ],
         "configuration": {
-            "title": "Code:X Leader Mode",
-            "type": "object",
+            "title": "Code:X",
             "properties": {
-                "codex.leader.showKeyGuide": {
-                    "type": "string",
-                    "enum": [
-                        "always",
-                        "never"
-                    ],
-                    "default": "always"
-                },
-                "codex.leader.keybindings": {
+                "codex.whichkey.bindings": {
+                    "type": "array",
                     "default": [
                         {
-                            "keySequence": [
-                                "c"
-                            ],
-                            "label": "Copilot"
+                            "key": "c",
+                            "name": "Copilot",
+                            "type": "bindings",
+                            "bindings": [
+                                {
+                                    "key": "c",
+                                    "name": "Copilot Chat",
+                                    "type": "command",
+                                    "command": "workbench.panel.chat"
+                                },
+                                {
+                                    "key": "i",
+                                    "name": "Copilot Chat inline",
+                                    "type": "command",
+                                    "command": "inlineChat.startWithCurrentLine"
+                                }
+                            ]
                         },
                         {
-                            "keySequence": [
-                                "c",
-                                "c"
-                            ],
-                            "command": "workbench.panel.chat",
-                            "when": "workbench.panel.chat.view.copilot.active"
+                            "key": "d",
+                            "name": "Debug",
+                            "type": "bindings",
+                            "bindings": [
+                                {
+                                    "key": "d",
+                                    "name": "Debug start",
+                                    "type": "command",
+                                    "command": "workbench.action.debug.start"
+                                },
+                                {
+                                    "key": "D",
+                                    "name": "Debug stop",
+                                    "type": "command",
+                                    "command": "workbench.action.debug.stop"
+                                },
+                                {
+                                    "key": "r",
+                                    "name": "Debug restart",
+                                    "type": "command",
+                                    "command": "workbench.action.debug.restart"
+                                }
+                            ]
                         },
                         {
-                            "keySequence": [
-                                "c",
-                                "e"
-                            ],
-                            "command": "workbench.panel.chatEditing",
-                            "when": "workbench.panel.chat.view.edits.active"
+                            "key": "e",
+                            "name": "Editor",
+                            "type": "bindings",
+                            "bindings": [
+                                {
+                                    "key": "c",
+                                    "name": "Make section",
+                                    "type": "command",
+                                    "command": "codex.command.makeSection"
+                                },
+                                {
+                                    "key": "d",
+                                    "name": "Make divider",
+                                    "type": "command",
+                                    "command": "codex.command.makeDivider"
+                                },
+                                {
+                                    "key": "l",
+                                    "name": "Duplicate line down",
+                                    "type": "command",
+                                    "command": "editor.action.copyLinesDownAction"
+                                },
+                                {
+                                    "key": "L",
+                                    "name": "Duplicate line up",
+                                    "type": "command",
+                                    "command": "editor.action.copyLinesUpAction"
+                                },
+                                {
+                                    "key": "m",
+                                    "name": "Make header",
+                                    "type": "command",
+                                    "command": "codex.command.makeHeader"
+                                },
+                                {
+                                    "key": "s",
+                                    "name": "Toggle header/source",
+                                    "type": "command",
+                                    "command": "clangd.switchheadersource"
+                                }
+                            ]
                         },
                         {
-                            "keySequence": [
-                                "c",
-                                "i"
-                            ],
-                            "command": "inlineChat.startWithCurrentLine",
-                            "when": "editorFocus && github.copilot.chat.editor.enableLineTrigger && inlineChatHasProvider && !editorReadonly && !inlineChatVisible"
+                            "key": "s",
+                            "name": "Show",
+                            "type": "bindings",
+                            "bindings": [
+                                {
+                                    "key": "e",
+                                    "name": "Show explorer",
+                                    "type": "command",
+                                    "command": "workbench.view.explorer"
+                                },
+                                {
+                                    "key": "s",
+                                    "name": "Show search",
+                                    "type": "command",
+                                    "command": "workbench.view.search"
+                                },
+                                {
+                                    "key": "g",
+                                    "name": "Show source control",
+                                    "type": "command",
+                                    "command": "workbench.view.scm"
+                                },
+                                {
+                                    "key": "t",
+                                    "name": "Show test",
+                                    "type": "command",
+                                    "command": "workbench.view.extension.test"
+                                },
+                                {
+                                    "key": "r",
+                                    "name": "Show remote explorer",
+                                    "type": "command",
+                                    "command": "workbench.view.remote"
+                                },
+                                {
+                                    "key": "x",
+                                    "name": "Show extensions",
+                                    "type": "command",
+                                    "command": "workbench.view.extensions"
+                                },
+                                {
+                                    "key": "p",
+                                    "name": "Show problem",
+                                    "type": "command",
+                                    "command": "workbench.actions.view.problems"
+                                },
+                                {
+                                    "key": "o",
+                                    "name": "Show output",
+                                    "type": "command",
+                                    "command": "workbench.action.output.toggleOutput"
+                                },
+                                {
+                                    "key": "d",
+                                    "name": "Show debug console",
+                                    "type": "command",
+                                    "command": "workbench.debug.action.toggleRepl"
+                                }
+                            ]
                         },
                         {
-                            "keySequence": [
-                                "c",
-                                "s"
-                            ],
-                            "command": "editor.action.inlineSuggest.trigger",
-                            "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+                            "key": "v",
+                            "name": "Versioning",
+                            "type": "bindings",
+                            "bindings": [
+                                {
+                                    "key": "m",
+                                    "name": "Magit",
+                                    "type": "command",
+                                    "command": "magit.status"
+                                },
+                                {
+                                    "key": "v",
+                                    "name": "Magit",
+                                    "type": "command",
+                                    "command": "magit.status"
+                                }
+                            ]
                         },
                         {
-                            "keySequence": [
-                                "d"
-                            ],
-                            "label": "Debug"
+                            "key": "?",
+                            "name": "Search bindings",
+                            "type": "command",
+                            "command": "whichkey.searchBindings"
                         },
                         {
-                            "keySequence": [
-                                "d",
-                                "d"
-                            ],
-                            "command": "workbench.action.debug.start",
-                            "label": "Debug start"
-                        },
-                        {
-                            "keySequence": [
-                                "d",
-                                "D"
-                            ],
-                            "command": "workbench.action.debug.stop",
-                            "label": "Debug stop"
-                        },
-                        {
-                            "keySequence": [
-                                "d",
-                                "r"
-                            ],
-                            "command": "workbench.action.debug.restart",
-                            "label": "Debug restart"
-                        },
-                        {
-                            "keySequence": [
-                                "e"
-                            ],
-                            "label": "Editor"
-                        },
-                        {
-                            "keySequence": [
-                                "e",
-                                "c"
-                            ],
-                            "command": "codex.command.makeSection",
-                            "label": "Make section"
-                        },
-                        {
-                            "keySequence": [
-                                "e",
-                                "d"
-                            ],
-                            "command": "codex.command.makeDivider",
-                            "label": "Make divider"
-                        },
-                        {
-                            "keySequence": [
-                                "e",
-                                "e"
-                            ],
-                            "command": "codex.command.explorer",
-                            "label": "Explorer"
-                        },
-                        {
-                            "keySequence": [
-                                "e",
-                                "l"
-                            ],
-                            "command": "editor.action.copyLinesDownAction",
-                            "label": "Duplicate Line Down"
-                        },
-                        {
-                            "keySequence": [
-                                "e",
-                                "L"
-                            ],
-                            "command": "editor.action.copyLinesUpAction",
-                            "label": "Duplicate Line Up"
-                        },
-                        {
-                            "keySequence": [
-                                "e",
-                                "m"
-                            ],
-                            "command": "codex.command.makeHeader",
-                            "label": "Make header"
-                        },
-                        {
-                            "keySequence": [
-                                "e",
-                                "s"
-                            ],
-                            "command": "clangd.switchheadersource",
-                            "label": "Toggle Header/Source"
-                        },
-                        {
-                            "keySequence": [
-                                "v"
-                            ],
-                            "label": "Versioning"
-                        },
-                        {
-                            "keySequence": [
-                                "v",
-                                "c"
-                            ],
-                            "command": "git.commit",
-                            "label": "Git Commit"
-                        },
-                        {
-                            "keySequence": [
-                                "v",
-                                "p"
-                            ],
-                            "command": "git.push",
-                            "label": "Git Push"
-                        },
-                        {
-                            "keySequence": [
-                                "v",
-                                "s"
-                            ],
-                            "command": "git.stageAll",
-                            "label": "Git stage all changes"
-                        },
-                        {
-                            "keySequence": [
-                                "v",
-                                "v"
-                            ],
-                            "command": "magit.status",
-                            "label": "Git Status"
+                            "key": ".",
+                            "name": "Repeat last command",
+                            "type": "command",
+                            "command": "whichkey.repeatMostRecent"
                         }
                     ],
+                    "description": "Whichkey bindings for Code:X"
+                },
+                "codex.whichkey.bindingOverrides": {
                     "type": "array",
-                    "description": "List of keybindings",
-                    "items": {
-                        "type": "object",
-                        "title": "keybinding",
-                        "properties": {
-                            "label": {
-                                "type": [
-                                    "string",
-                                    "null"
-                                ],
-                                "description": "Label for the key binding"
-                            },
-                            "command": {
-                                "type": [
-                                    "string",
-                                    "null"
-                                ],
-                                "description": "Command for the key binding"
-                            },
-                            "args": {
-                                "type": "array",
-                                "description": "Arguments for the command",
-                                "items": {
-                                    "type": "object"
-                                }
-                            },
-                            "keySequence": {
-                                "type": "array",
-                                "description": "Key sequence for the command",
-                                "items": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
+                    "default": [ ],
+                    "description": "Whichkey binding overrides for Code:X"
                 }
             }
         },
@@ -414,7 +364,7 @@
                 "command": "workbench.action.navigateDown"
             },
             {
-                "key": "ctrl+shift+=",
+                "key": "ctrl+=",
                 "command": "editor.action.fontZoomIn",
                 "when": "editorTextFocus"
             },
@@ -472,16 +422,6 @@
                 "command": "workbench.action.toggleAuxiliaryBar"
             },
             {
-                "key": "ctrl+c",
-                "command": "codex.leader.enter",
-                "when": "editorTextFocus"
-            },
-            {
-                "key": "ctrl+g",
-                "command": "codex.leader.leave",
-                "when": "leadermode.isActive"
-            },
-            {
                 "key": "escape q",
                 "command": "rewrap.rewrapComment",
                 "when": "editorTextFocus"
@@ -490,56 +430,30 @@
                 "key": "ctrl+c y",
                 "command": "-emacs-mcx.browseKillRing",
                 "when": "!terminalFocus"
+            },
+            {
+                "key": "ctrl+c",
+                "command": "whichkey.show",
+                "args": "codex.whichkey.bindings",
+                "when": "editorTextFocus"
             }
-        ],
-        "viewsContainers": {
-            "activitybar": [
-                {
-                    "id": "vscodex",
-                    "title": "Code:X",
-                    "icon": "$(book)"
-                }
-            ]
-        },
-        "views": {
-            "vscodex": [
-                {
-                    "id": "assistant",
-                    "name": "Code:X",
-                    "type": "webview",
-                    "icon": "$(book)"
-                }
-            ]
-        }
+        ]
+    },
+    "scripts": {
+        "build": "tsc -p ./",
+        "watch": "tsc -p ./ --watch",
+        "start": "npm run build",
+        "clean": "rm -rf out && rm -rf node_modules && rm -rf *.vsix"
     },
     "devDependencies": {
-        "@tailwindcss/forms": "^0.5.9",
-        "@types/node": "^22.10.2",
         "@types/vscode": "^1.94.0",
-        "@vitejs/plugin-vue": "^5.2.1",
         "@vscode/vsce": "^3.2.1",
-        "@vue/runtime-core": "^3.5.13",
-        "@vue/runtime-dom": "^3.5.13",
         "ovsx": "^0.9.5",
-        "prettier": "^3.4.2",
-        "prettier-plugin-tailwindcss": "^0.6.9",
-        "prettier-plugin-vue": "^1.1.6",
         "typescript": "^5.7.2"
-    },
-    "dependencies": {
-        "@vscode/codicons": "^0.0.36",
-        "@vue/compiler-sfc": "^3.5.13",
-        "autoprefixer": "^10.4.20",
-        "clipboard": "^2.0.11",
-        "datatables.net-dt": "^2.1.8",
-        "jquery": "^3.7.1",
-        "postcss": "^8.4.49",
-        "preline": "^2.6.0",
-        "tailwindcss": "^3.4.17",
-        "vue": "^3.5.13"
     },
     "extensionPack": [
         "tuttieee.emacs-mcx",
+        "VSpaceCode.whichkey",
         "kahole.magit",
         "wenhoujx.swiper",
         "dnut.rewrap-revived",

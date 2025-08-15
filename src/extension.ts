@@ -16,29 +16,11 @@
 
 import * as vscode from "vscode";
 
-import * as assistant from "./assistant_provider";
 import * as command from "./command_provider";
-import * as leader from "./leader_provider";
 
 export function activate(context: vscode.ExtensionContext): void {
-    // /////////////////////////////////////////////////////////////////////////
-    // Assistant provider
-    // /////////////////////////////////////////////////////////////////////////
-
-    const provider = new assistant.AssistantProvider(context);
-    context.subscriptions.push(vscode.window.registerWebviewViewProvider("assistant", provider));
-
-    // ////////////////////////////////////////////////////////////////////////
-    // Commands provider
-    // ////////////////////////////////////////////////////////////////////////
 
     const command_provider = new command.CommandProvider(context.extensionUri);
-
-    context.subscriptions.push(
-        vscode.commands.registerCommand("codex.command.explorer", () => {
-            command_provider.explorer();
-        })
-    );
 
     context.subscriptions.push(
         vscode.commands.registerCommand("codex.command.indentBuffer", () => {
@@ -82,23 +64,11 @@ export function activate(context: vscode.ExtensionContext): void {
         })
     );
 
-    // ////////////////////////////////////////////////////////////////////////
-    // Leader provider
-    // ////////////////////////////////////////////////////////////////////////
-
-    const leader_provider = new leader.LeaderProvider(context.extensionUri);
-
-    context.subscriptions.push(
-        vscode.commands.registerCommand("codex.leader.enter", () => {
-            leader_provider.enable();
-        })
-    );
-
-    context.subscriptions.push(
-        vscode.commands.registerCommand("codex.leader.leave", () => {
-            leader_provider.disable();
-        })
-    );
+    vscode.commands.executeCommand("whichkey.register", {
+        bindings: "codex.whichkey.bindings",
+        overrides: "codex.whichkey.bindingOverrides",
+        title: "Code:X"
+    });
 }
 
 // /////////////////////////////////////////////////////////////////////////////
