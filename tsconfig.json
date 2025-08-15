@@ -8,7 +8,10 @@
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "skipLibCheck": true,
-        "outDir": "./out"
+        "outDir": "./out",
+        "resolveJsonModule": true,
+        "declaration": false,
+        "sourceMap": false
     },
     "include": [ "src/*.ts" ],
     "exclude": [ "node_modules" ]

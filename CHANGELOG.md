@@ -13,6 +13,12 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.13] - 2025-08-15
+
+### Fixed
+
+- Web compatibility
+
 ## [0.0.12] - 2025-08-15
 
 ### Added
