@@ -173,6 +173,12 @@
                             "type": "bindings",
                             "bindings": [
                                 {
+                                    "key": "c",
+                                    "name": "Show chat sessions",
+                                    "type": "command",
+                                    "command": "workbench.view.chat.sessions"
+                                },
+                                {
                                     "key": "e",
                                     "name": "Show explorer",
                                     "type": "command",
