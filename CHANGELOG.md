@@ -13,6 +13,18 @@ Types of changes include:
 - `Fixed` for any bug fixes
 - `Security` in case of vulnerabilities
 
+## [0.0.20] - 2025-10-25
+
+### Added
+
+- Leader sequence: C-c s c: Show copilot sessions
+
+## [0.0.19] - 2025-10-25
+
+### Added
+
+- Leader sequence: C-c s c: Show copilot sessions
+
 ## [0.0.18] - 2025-08-16
 
 ### Fixed
